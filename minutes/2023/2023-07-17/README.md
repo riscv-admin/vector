@@ -14,6 +14,13 @@ Attendance (# people):
 - [Slides](https://docs.google.com/presentation/d/1LNhpuNwU54TgwGfcl-Fgf4HUFxCxh0AztPaeqMuRQRw)
 - [Video](https://drive.google.com/file/d/1y_XWJus8M5ZwSQ2cvEOzCjlOmsmXOnN4/view)
 
+## Meeting Schedule
+
+- We meet every other Monday, 11:00-12:00 ET
+- Previous meetings: [2023-JUN-12](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-06-12), [2023-JUN-26](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-06-26)
+- Current meeting: [2023-JUL-17](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-07-17) (rescheduled for meeting on 2023-JUL-10)
+- Next meeting: 2023-JUL-24 (back to normal schedule)
+
 ## Agenda
 - Refinement of the charter
 - Refinement of the gap analysis list
