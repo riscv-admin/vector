@@ -47,7 +47,9 @@ Current gap analysis list:
 
 - A self-contained behavioural specification directly encoded in the vector instructions.
 
-- Supporting control flow divergence (including predicated instructions with additional masking features).
+- Bigger register files (e.g., to support graphics operations).
+
+- Supporting control-flow divergence (including predicated instructions with additional masking features).
 
 - Support for matrix processing, in two flavours:
 
@@ -55,48 +57,20 @@ Current gap analysis list:
 
   - As an attached facility, with dedicated matrix registers (like in the Intel AMX case).
 
-- New profiles (subsets) of the vector spec. Jose would like to collect any specific requirements about new variants of Zve (vector for the embedded domain). We are aware that there are already 5 variants of Zve (Ken Dockser brings this up).
+- New profiles (subsets) of the scalable vector specification, particularly for embedded systems (we already have five variants of Zve).
 
-- Streaming of data (Luca Benini's work from ETH Zurich is mentioned again).
+- Data streaming architectures (e.g., adding streaming buffers for SIMD processing).
 
-- General planning of the encoding space and instruction formats.
+- Additional GPU-like capabiltiies for RISC-V (streaming, large regiser files, and contro-flow divergence already above).
 
+- General planning of the encoding space and instruction formats, resulting in better integration guidelins for custom instructions.
 
+- Coprocessor interface (a broader area than just SIMD, but we want to capture the SIMD requirements).
 
-Allen Baum (Esperanto) tells us about an idea he is working on for extending the vector extension with ad-hoc mask registers (rather than reusing the LSB of v0). This is in line with one of Esperanto's designs.
+## Ongoing work
 
+- Allen Baum (Esperanto) tells us about an idea he is working on for extending the vector extension with ad-hoc mask registers (rather than reusing the LSB of v0). This is in line with one of Esperanto's designs. (Guy to potentially speak on 2023-JUL-24.)
 
+- Guy Lemiux to talk about work on coprocessors done within his university research group, both in terms of ISA implications and communication buses. (To be scheduled.)
 
-The reason why v0 was chosen to be a special register is asked by Jose. Ken Dockser mentions instruction encoding space being very tight. Seems like Allen's proposal may benefit from 64 bits instruction.
-
-
-
-Jose thinks that the subject of coprocessors likely goes beyond the vector scope, which is a view also expressed in the previous session by Mark Himelsteain.
-
-
-
-As a response to that argument, at least two members (Guy and Abel) highlight that the subject of coprocessors entails two aspects:
-
-
-
-- Reserving ISA ranges and recommending instruction formats for common custom vector extensions. A good example is the .insn statement supported on gcc, that allows certain instructions to be easily tried out without even modifying the compiler.
-
-
-
-- A communication bus, which can be regarded as a non-ISA subject (and therefore as something that gets a different priority as a subject to be discussed by the group).
-
-
-
-Guy Lemiux accepts Jose's invitation to talk about work on coprocessors done within his university research group, both in terms of ISA implications and communication buses. This will be scheduled whenever Guy is ready.
-
-
-
-An additional point from the graphics domain is added to the list of topics for the gap analysis: a bigger register file, with more than 32 registers. That feature will also demand 64 bits instruction encoding (a recurrent subject).
-
-
-
-We know that the vector register file has no limitation preventing implementations to scale up in width, with VLEN being implementation-dependent. Having wide registers is actually good for shading many pixels in one go.
-
-
-
-However having just 32 registers seems like a bottleneck when compared with typical GPUs, having no less than 100 registers. If a GPU based on RISC-V is limited to 32 registers, complex shaders will get register spilling to the stack frame.
+## Matrix processing (attached facility variant)
