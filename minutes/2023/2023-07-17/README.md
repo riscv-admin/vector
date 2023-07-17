@@ -43,39 +43,21 @@ RISC-V Vector SIG will continuously interact with other groups, including Commit
 
 ## Refinement of the gap analysis list
 
+Current gap analysis list:
 
+- A self-contained behavioural specification directly encoded in the vector instructions.
 
-We go again through the gap analysis list:
+- Supporting control flow divergence (including predicated instructions with additional masking features).
 
+- Support for matrix processing, in two flavours:
 
+  - Integrated within the vector core, reusing vector registers (like in the IBM POWER MMA case).
 
-- A self-contained behavioural specification for vector instructions.
-
-
-
-- Supporting control flow divergence
-
-
-
-- Support for matrix multiply in two flavours:
-
-* Integrated within the vector core, reusing vector registers
-
-* As an attached facility, with dedicated matrix registers (like in the Intel AMX case)
-
-
+  - As an attached facility, with dedicated matrix registers (like in the Intel AMX case).
 
 - New profiles (subsets) of the vector spec. Jose would like to collect any specific requirements about new variants of Zve (vector for the embedded domain). We are aware that there are already 5 variants of Zve (Ken Dockser brings this up).
 
-
-
-- Predicated instructions. This is removed from the list because there seem to be agreement that predicated instructions are just one particular approximation to control flow divergence, which is already present in the list. Mask registers are already providing predication and there is a preference on building on top of masking.
-
-
-
 - Streaming of data (Luca Benini's work from ETH Zurich is mentioned again).
-
-
 
 - General planning of the encoding space and instruction formats.
 
