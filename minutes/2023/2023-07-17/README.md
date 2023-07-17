@@ -69,7 +69,7 @@ Current gap analysis list:
 
 ## Ongoing work
 
-- Allen Baum (Esperanto) tells us about an idea he is working on for extending the vector extension with ad-hoc mask registers (rather than reusing the LSB of v0). This is in line with one of Esperanto's designs. (Allen to potentially speak on 2023-JUL-24.)
+- Allen Baum (Esperanto) is working on an idea for extending the vector extension with ad-hoc mask registers (rather than reusing the LSB of v0). This is in line with one of Esperanto's designs. (Allen to potentially speak on 2023-JUL-24.)
 
 - Guy Lemiux to talk about work on coprocessors done within his university research group, both in terms of ISA implications and communication buses. (To be scheduled.)
 
