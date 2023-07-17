@@ -63,13 +63,13 @@ Current gap analysis list:
 
 - Additional GPU-like capabiltiies for RISC-V (streaming, large regiser files, and contro-flow divergence already above).
 
-- General planning of the encoding space and instruction formats, resulting in better integration guidelins for custom instructions.
+- General planning of the encoding space and instruction formats, resulting in better integration guidelines for custom instructions.
 
 - Coprocessor interface (a broader area than just SIMD, but we want to capture the SIMD requirements).
 
 ## Ongoing work
 
-- Allen Baum (Esperanto) tells us about an idea he is working on for extending the vector extension with ad-hoc mask registers (rather than reusing the LSB of v0). This is in line with one of Esperanto's designs. (Guy to potentially speak on 2023-JUL-24.)
+- Allen Baum (Esperanto) tells us about an idea he is working on for extending the vector extension with ad-hoc mask registers (rather than reusing the LSB of v0). This is in line with one of Esperanto's designs. (Allen to potentially speak on 2023-JUL-24.)
 
 - Guy Lemiux to talk about work on coprocessors done within his university research group, both in terms of ISA implications and communication buses. (To be scheduled.)
 
