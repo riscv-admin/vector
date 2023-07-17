@@ -32,23 +32,14 @@ A reminder that our draft charter is due by the end of July 2023, when it should
 "
 The Vector SIG is managed under the Unprivileged Committee, and is intended to develop the strategy, gaps, and prioritizations for all SIMD processing capabilities within RISC-V. We define SIMD processing capabilities to include the storage and manipulation of collections of elements organized as vectors, matrices, tensors, and other data structures that are related to vectors.
 
-
-
 The goal of Vector SIG is to make RISC-V the architecture of choice for SIMD processing in a wide spectrum of applications, from embedded systems to supercomputers. RISC-V Vector SIG will continuously pursue enhancements to the SIMD processing capabilities of RISC-V architecture to achieve that goal.
-
-
 
 We will achieve enhancements to RISC-V SIMD processing capabilities by identifying gaps in coverage of the RISC-V Instruction Set Architecture and recommending Task Groups that will develop the specification of those enhancements. As we identify the gaps, we will always prioritize the list of gaps and develop a strategy to fill those gaps in the adopted priority order.
 
-
-
-The RISC-V Vector SIG will deliver a series of recommended enhancement areas. for SIMD processing in the RISC-V architecture - the actual specification of the enhancements will be the result of work by the Task Groups spawned by recommendation of the RISC-V Vector SIG. (Vector SIG recommends and specifies the work of the task groups - final decision on Technical Group creation is by the Technical Steering Committee.)
-
-
+The RISC-V Vector SIG will deliver a series of recommended enhancement areas for SIMD processing in the RISC-V architecture - the actual specification of the enhancements will be the result of work by the Task Groups spawned by recommendation of the RISC-V Vector SIG. (Vector SIG recommends and specifies the work of the Task Groups - final decision on Task Group creation is by the Technical Steering Committee.)
 
 RISC-V Vector SIG will continuously interact with other groups, including Committees, SIGs, and TGs within the RISC-V community. Although we expect our list of collaborators to be dynamic we can identify some initial collaborators: Vector TG (Zvfh extension), Packed SIMD TG (P extension), Graphics SIG, AI/ML SIG, Applications and Tools Committee, Vector Crypto TG, Compiler Built-ins SIG.
 "
-
 
 ## Refinement of the gap analysis list
 
