@@ -9,11 +9,15 @@ Attendance (# people):
 - Abel Bernabeu (Vice-chair, Esperanto)
 - Qiu Jing (T-Head)
 
+## Disclaimer
+
+- [Slides](https://docs.google.com/presentation/d/1LNhpuNwU54TgwGfcl-Fgf4HUFxCxh0AztPaeqMuRQRw)
+- [Video](https://drive.google.com/file/d/1y_XWJus8M5ZwSQ2cvEOzCjlOmsmXOnN4/view)
 
 ## Agenda
 - Refinement of the charter
 - Refinement of the gap analysis list
-  Overview of matrix processing work (attached facilty variant)
+- Overview of matrix processing work (attached facilty variant)
 
 ## Refinement of the charter
 A reminder that our draft charter is due by the end of July 2023, when it should be considered for approval by the Unprivileged Committee. The current wording is reviewed:
