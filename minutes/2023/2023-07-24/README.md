@@ -23,7 +23,7 @@ Attendance (# people):
 ## Agenda
 - Approval of the Vector SIG proposed charter
 - Refinement of the gap analysis list
-  Presentation by Guy Lemiux
+- Presentation by Guy Lemiux
 
 ## Refinement of the charter
 A reminder that our draft charter is due by the end of July 2023, when it should be considered for approval by the Unprivileged Committee. The current wording is reviewed:
