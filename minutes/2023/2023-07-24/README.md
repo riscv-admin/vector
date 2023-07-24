@@ -22,7 +22,7 @@ Attendance (# people):
 
 ## Agenda
 - Approval of the Vector SIG proposed charter
-- Refinement of the gap analysis list
+- Proposed task groups
 - Presentation by Guy Lemieux
 
 ## Refinement of the charter
@@ -50,7 +50,7 @@ Current gap analysis list:
 
 - Supporting control-flow divergence (including predicated instructions with additional masking features).
 
-- Support for matrix processing, in two flavours:
+- Support for matrix processing, in two flavors:
 
   - Integrated within the vector core, reusing vector registers (like in the IBM POWER MMA case).
 
@@ -60,11 +60,17 @@ Current gap analysis list:
 
 - Data streaming architectures (e.g., adding streaming buffers for SIMD processing).
 
-- Additional GPU-like capabiltiies for RISC-V (streaming, large regiser files, and contro-flow divergence already above).
+- Additional GPU-like capabiltiies for RISC-V (streaming, large regiser files, and control-flow divergence already above).
 
 - General planning of the encoding space and instruction formats, resulting in better integration guidelines for custom instructions.
 
 - Coprocessor interface (a broader area than just SIMD, but we want to capture the SIMD requirements).
+
+## Prioritzed list of proposed Task Groups
+
+1. Attached-facility variant of matrix processing.
+
+1. Self-contained behavior directly encoded in the vector instructions.
 
 ## Ongoing work
 
