@@ -52,9 +52,11 @@ Current gap analysis list:
 
 - Support for matrix processing, in two flavors:
 
-  - Integrated within the vector core, reusing vector registers (like in the IBM POWER MMA case).
+  - Fully integrated within the vector core, reusing vector registers (like the SiFive work).
 
   - As an attached facility, with dedicated matrix registers (like in the Intel AMX case).
+
+  - Hybrid of the two, such as inputs from vectors and accumulators from matrix registers (like in the IBM POWER MMA case).
 
 - New profiles (subsets) of the scalable vector specification, particularly for embedded systems (we already have five variants of Zve).
 
@@ -76,6 +78,6 @@ Current gap analysis list:
 
 - Allen Baum (Esperanto) is working on an idea for extending the vector extension with ad-hoc mask registers (rather than reusing the LSB of v0). This is in line with one of Esperanto's designs. (Allen to potentially speak on 2023-AUG-07.)
 
-  SiFive has developed matrix processing approach that is fully integrated with vector facility (no additional registers). Jose has asked Krste Asanovic for material. 
+- SiFive has developed matrix processing approach that is fully integrated with vector facility (no additional registers). Jose has asked Krste Asanovic for material. 
 
 - Philipp Tomsich asked Greg Favor if they could kick off a discussion regarding opcode space. 
