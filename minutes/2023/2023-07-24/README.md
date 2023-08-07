@@ -81,3 +81,11 @@ Current gap analysis list:
 - SiFive has developed matrix processing approach that is fully integrated with vector facility (no additional registers). Jose has asked Krste Asanovic for material. 
 
 - Philipp Tomsich asked Greg Favor if they could kick off a discussion regarding opcode space. 
+
+## Presentation: Composable Custom eXtensions
+
+Guy Lemieux (UBC) and Jan Gray (Gray Research) gave a presentation on their Composable Custom eXtensions proposal. This proposal has a broad impact on RISC-V and will be submitted to the proper group. Guy and Jan are looking for support from various SIGs and otther committess and we believe their proposal is relevant to us and that their work should move forward.
+
+- Slides ([PDF](https://github.com/riscv-admin/vector/blob/main/minutes/2023/2023-07-24/CCX%20Composable%20Custom%20eXtensions%20-%20Vector%20SIG.pdf))
+- Slides ([Google Docs](https://docs.google.com/presentation/d/10ky274XsgFANSlsbFhnJNPYUNYcn6EYlWNy7NtOidzI/edit#slide=id.g2316d3069ac_2_50))
+- Video ([YouTube](https://www.youtube.com/watch?v=ugr3RqmWhWw))
