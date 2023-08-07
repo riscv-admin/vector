@@ -1,6 +1,6 @@
 ## Meeting details
 
-Date: 2023-07-24
+Date: 2023-08-07
 Time: 17:00 (CET), 08:00 (PDT), 11:00 (EDT)
 
 Attendance (# people):
