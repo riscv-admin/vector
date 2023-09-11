@@ -34,7 +34,7 @@ Current gap analysis list:
 
 - Supporting control-flow divergence (including predicated instructions with additional masking features).
 
-- Support for matrix processing, in two flavors:
+- Support for matrix processing, in three flavors:
 
   - Fully integrated within the vector core, reusing vector registers (like the SiFive work).
 
