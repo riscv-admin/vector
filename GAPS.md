@@ -54,3 +54,23 @@ The specification could (and should) impose certain restrictions on that flexibi
 For example: maybe only square matrix registers should be allowed, or the number of rows and columns must be a power of 2.
 The specification must support the development of *matrix size agnostic* code at the machine level.
 A correctly written agnostic binary will produce the same result in any RISC-V processor that supports the attached matrix facility.
+
+## GAP: Direct Encoding of Behavior on Instructions
+
+The RISC-V vector architecture relies on configuration registers to encode essential descriptors of instruction behavior, particularly the element width (SEW) and the register grouping (LMUL).
+This is a good solution for efficient encoding of vector instructions in a cramped opcode space.
+It also supports the creation of *meta-code*, which can implement different computations depending on the values of those configuration registers.
+These positive aspects of the RISC-V vector architecture also result in some disadvantages with respect to other architecture that more explicitly define the semantics of their vector instructions:
+- The semantics of an instruction cannot be directly derived from the instruction alone, as it also depends on the values of the configuration registers.
+  This has implications for code generation, code debugging, and various analysis tools.
+- In code that uses mixed data types (e.g., 32-bit and 64-bit) it can become necessary to switch the values of the configuration registers often.
+  This leads to longer code path and likely lower performance.
+- Code with semantics controlled by configuration registers opens the possibility of additional security vulnerabilities.
+  Any code that can be forced to do what was not intended is an attack vector (e.g., return-oriented programming).
+
+Our recommendation is to form a Task Group to develop the specification of a more direct encoding version of RISC-V vector instructions.
+We realize that, in a scalable vector architecture, some configuration registers will be always necessary.
+For example, the vector length cannot be directly encoded in the instruction, otherwise the code would not be *vector length agnostic*.
+There is a clear distinction between *global properties* (e.g., vector length) and *local properties* (e.g., element width).
+We do not want to prescript or limit the solutions the Task Group will investigate, but we believe that it would be advantageous to directly encode the local properties on each instruction, while leaving the global properties for the control registers.
+An additional impact of this work could include supporting the explicit identification of a mask register in each vector instruction.
