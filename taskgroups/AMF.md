@@ -14,5 +14,3 @@ A correctly written agnostic binary will produce the same result in any RISC-V p
 ## Members
 
 - Philipp Tomsich
-- Zhiqiang Liu
-- Xin Ouyang
