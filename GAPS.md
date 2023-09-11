@@ -39,7 +39,7 @@ For now, we recommend the following course of action for the various task groups
 Some modern processors have been augmented with an *attached matrix facility*.
 An attached matrix facility executes instructions that are part of the processor instruction stream and, from an architectural perspective, must follow program order.
 An attached matrix facility is also *self-contained* and *orthogonal* to other facilities in the architecture.
-It defines its won set of matrix registers.
+It defines its own set of matrix registers.
 It performs loads and stores of those matrix registers against the memory subsystem, in full respect of the processor memory model.
 It only executes computation instructions that use the facility's own matrix registers. (The load and stores instruction will have to use address registers.)
 Disabling (or removing) the attached matrix facility must have no impact in any other facility.
