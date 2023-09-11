@@ -36,7 +36,7 @@ For now, we recommend the following course of action for the various task groups
 
 ## GAP: Attached Matrix Facility
 
-Some modern processors have been augmentend with an *attached matrix facility*.
+Some modern processors have been augmented with an *attached matrix facility*.
 An attached matrix facility executes instructions that are part of the processor instruction stream and, from an architectural perspective, must follow program order.
 An attached matrix facility is also *self-contained* and *orthogonal* to other facilities in the architecture.
 It defines its won set of matrix registers.
