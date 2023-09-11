@@ -18,7 +18,7 @@ Attendance (# people):
 - We meet every other Monday, 11:00-12:00 ET
 - Previous meetings: [2023-JUN-12](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-06-12), [2023-JUN-26](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-06-26), [2023-JUL-17](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-07-17), [2023-JUL-24](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-07-24)
 - Current meeting: [2023-AUG-07](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-08-07)
-- Next meeting: 2023-AUG-21
+- Next meeting: 2023-SEP-11
 
 ## Agenda
 - Approval of the Vector SIG proposed charter
