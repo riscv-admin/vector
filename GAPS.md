@@ -88,7 +88,7 @@ Disabling (or removing) the attached matrix facility must have no impact in any 
 There are different options for supporting loads and stores of matrix registers.
 In one variant, the matrix facility ISA includes load and store instructions of those matrix registers against the memory subsystem, in full respect of the processor memory model.
 In another variant, the matrix facility ISA includes only move instructions between vector registers and matrix registers.
-Hybrid solutions are alos possible.
+Hybrid solutions are also possible.
 Computation instructions in an integrated matrix facility typically use vector registers as inputs to an operation that produces matrix intermediate results.
 These matrix intermediate results are then combined with matrices in the matrix registers to produce a new matrix, to be stored in a target matrix register.
 
