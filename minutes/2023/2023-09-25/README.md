@@ -1,6 +1,6 @@
 ## Meeting details
 
-Date: 2023-09-11
+Date: 2023-09-25
 Time: 17:00 (CET), 08:00 (PDT), 11:00 (EDT)
 
 Attendance (# people):
@@ -16,11 +16,12 @@ Attendance (# people):
 ## Meeting Schedule
 
 - We meet every other Monday, 11:00-12:00 ET
-- Previous meetings: [2023-JUN-12](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-06-12), [2023-JUN-26](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-06-26), [2023-JUL-17](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-07-17), [2023-JUL-24](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-07-24), [2023-AUG-07](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-08-07)
-- Current meeting: [2023-SEP-11](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-09-11)
-- Next meeting: 2023-SEP-25
+- Previous meetings: [2023-JUN-12](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-06-12), [2023-JUN-26](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-06-26), [2023-JUL-17](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-07-17), [2023-JUL-24](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-07-24), [2023-AUG-07](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-08-07), [2023-SEP-11](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-09-11)
+- Current meeting: [2023-SEP-25](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-09-25)
+- Next meeting: 2023-OCT-02
 
 ## Agenda
+- Overview of integrated matrix facility [PDF](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-09-25/SMA.pdf)
 - Proposed gap analysis
 - Proposed task groups
 
