@@ -21,7 +21,8 @@ Attendance (# people):
 - Next meeting: 2023-OCT-02
 
 ## Agenda
-- Overview of integrated matrix facility [PDF](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-09-25/SMA.pdf)
+- Overview of integrated matrix facility - matrix accumulators are new architected register state and fully scalable [PDF](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-09-25/SMA.pdf)
+- Overview of vector matrix extension - matrix accumulators overlap scalable vector registers and scale along just one dimension [PDF](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-09-25/VMF.pdf)
 - Proposed gap analysis
 - Proposed task groups
 
