@@ -1,6 +1,6 @@
 # Task Group: Integrated Matrix Facility
 
-## Proposed Charter
+## Proposed charter
 
 Matrix operations are a performance critical component of deep-learning training and inference computations, scientific computing, and computational finance.
 Workloads of interest include modeling and simulation of physical systems, automated trading, natural-language processing, recommendation systems, and image recognition.  
@@ -29,14 +29,31 @@ The resulting specification will encompass:
 - A mapping of common matrix operations onto the newly defined instructions in the Integrated Matrix Extension; and
 - A review of the interactions of matrix load/store and prefetching of matrices with the RISC-V memory models and a specification of any deviations from the standard RISC-V memory model.
 
-## Acting Leadership
+## Acting leadership
 
 - Jose Moreira (IBM)
 
-## Proposed Workplan
+## Proposed workplan
 
 1. Inception (1 month) : Preliminary charter, call-for-candidates and identification of experts/resources
 1. Requirements analysis (4 months)
 1. Specification development (6 months)
 1. Proof-of-concept and quantitative analysis (6 months)
 
+## Proposed delivarables
+
+### Specification deliverables
+- Matrix operations unit extensions
+- Intrinsics specification for matrix operations
+
+### Compatibility and simulation tools
+- SAIL
+- Hand-written ACT w/ coverage-analysis
+
+### Proof-of-concept implementations
+- Linux kernel (e.g., context switching for matrix tiles)
+- oneDNN (https://github.com/oneapi-src/oneDNN)
+- GNU binutils
+- GCC with intrinsics support
+- QEMU
+- LLVM MLIR
