@@ -72,5 +72,31 @@ Our recommendation is to form a Task Group to develop the specification of a mor
 We realize that, in a scalable vector architecture, some configuration registers will be always necessary.
 For example, the vector length cannot be directly encoded in the instruction, otherwise the code would not be *vector length agnostic*.
 There is a clear distinction between *global properties* (e.g., vector length) and *local properties* (e.g., element width).
-We do not want to prescript or limit the solutions the Task Group will investigate, but we believe that it would be advantageous to directly encode the local properties on each instruction, while leaving the global properties for the control registers.
+We do not want to prescribe or limit the solutions the Task Group will investigate, but we believe that it would be advantageous to directly encode the local properties on each instruction, while leaving the global properties for the control registers.
 An additional impact of this work could include supporting the explicit identification of a mask register in each vector instruction.
+
+## GAP: Integrated Matrix Facility
+
+Some modern processors have been augmented with an *integrated matrix facility*.
+An integrated matrix facility executes instructions that are part of the processor instruction stream and, from an architectural perspective, must follow program order.
+An integrated matrix facility is also *closely coupled* with the vector facilities in the architecture.
+It defines its own set of scalable matrix registers, while reusing the scalable vector registers already in the architecture.
+Therefore, a processor with an integrated matrix facility requires a vector facility as well.
+One cannot have the former without the latter.
+There is no dependence in the other direction.
+Disabling (or removing) the attached matrix facility must have no impact in any other facility, including the vector facility.
+There are different options for supporting loads and stores of matrix registers.
+In one variant, the matrix facility ISA includes load and store instructions of those matrix registers against the memory subsystem, in full respect of the processor memory model.
+In another variant, the matrix facility ISA includes only move instructions between vector registers and matrix registers.
+Hybrid solutions are alos possible.
+Computation instructions in an integrated matrix facility typically use vector registers as inputs to an operation that produces matrix intermediate results.
+These matrix intermediate results are then combined with matrices in the matrix registers to produce a new matrix, to be stored in a target matrix register.
+
+Our recommendation is to form a Task Group to develop the specification of an integrated matrix facility ISA for RISC-V.
+Although it is expected that the Task Group will look at existing integrated matrix facilities for inspiration, it must address at least one key innovation: An integrated matrix facility for RISC-V must support *scalable matrices*.
+We can think of scalable matrices as the two-dimensional counterpart to scalable vectors.
+Implementations must have the flexibility to choose the shape (number of rows and number of columns) of their matrix registers.
+The specification could (and should) impose certain restrictions on that flexibility.
+For example: maybe only square matrix registers should be allowed, or the number of rows and columns must be a power of 2.
+The specification must support the development of *matrix size agnostic* code at the machine level.
+A correctly written agnostic binary will produce the same result in any RISC-V processor that supports the attached matrix facility.
