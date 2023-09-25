@@ -40,11 +40,11 @@ The resulting specification will encompass:
 1. Specification development (6 months)
 1. Proof-of-concept and quantitative analysis (6 months)
 
-## Proposed delivarables
+## Proposed deliverables
 
 ### Specification deliverables
-- Matrix operations unit extensions
-- Intrinsics specification for matrix operations
+- Integrated Matrix Extension ISA
+- Intrinsics specification for matrix instruction
 
 ### Compatibility and simulation tools
 - SAIL
