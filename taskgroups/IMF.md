@@ -31,6 +31,7 @@ The resulting specification will encompass:
 
 ## Acting leadership
 
+- Guido Araujo (Unicamp)
 - Jose Moreira (IBM)
 
 ## Proposed workplan
