@@ -12,7 +12,7 @@ An integrated matrix facility defines its own set of matrix registers, while als
 
 The Integrated Matrix Facility TG will specify an Integrated Matrix Extension to the RISC-V ISA.  
 The Integrated Matrix Extension is an extension to the RISC-V ISA including scalable matrix instructions.
-Those instructions operate on different operand sizes and allow the writing of matrix-geometry agnostic code matrix. 
+Those instructions operate on different operand sizes and allow the writing of matrix-geometry agnostic code. 
 
 The resulting specification will encompass:
 
