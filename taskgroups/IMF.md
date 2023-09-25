@@ -2,17 +2,17 @@
 
 ## Proposed Charter
 
-Matrix operations are a performance critical component of deep-learning training and inference computations.
-Workloads of interest include natural-language processing, recommendation systems, and image recognition.  
+Matrix operations are a performance critical component of deep-learning training and inference computations, scientific computing, and computational finance.
+Workloads of interest include modeling and simulation of physical systems, automated trading, natural-language processing, recommendation systems, and image recognition.  
 With the pervasive use of these applications in environments ranging from the datacenter to mobile applications and IoT, matrix operations for RISC-V should scale across these application domains and apply to both high-performance and resource-constrained environments.
 
 An integrated matrix facility executes instructions that are part of the processor instruction stream and, from an architectural perspective, must follow program order. 
 An integrated matrix facility is closely coupled to the vector facilities in RISC-V ISA.
-An integrated matrix facility  defines its own set of matrix registers, while also relying on the vector registers of the vector facility.
+An integrated matrix facility defines its own set of matrix registers, while also relying on the vector registers of the vector facility.
 
 The Integrated Matrix Facility TG will specify an Integrated Matrix Extension to the RISC-V ISA.  
-The Integrated Matrix Extension is an extension to the RISC-V ISA inlcudint scalalbe matrix instructions.
-Those instrucations operate on different operand sizes and allow the writing of matrix-geometry agnostic code matrix. 
+The Integrated Matrix Extension is an extension to the RISC-V ISA including scalable matrix instructions.
+Those instructions operate on different operand sizes and allow the writing of matrix-geometry agnostic code matrix. 
 
 The resulting specification will encompass:
 
