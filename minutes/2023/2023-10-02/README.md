@@ -18,7 +18,7 @@ Attendance (# people):
 - We meet every other Monday, 11:00-12:00 ET
 - Previous meetings: [2023-JUN-12](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-06-12), [2023-JUN-26](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-06-26), [2023-JUL-17](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-07-17), [2023-JUL-24](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-07-24), [2023-AUG-07](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-08-07), [2023-SEP-11](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-09-11), [2023-SEP-25](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-09-25)
 - Current meeting: [2023-OCT-02](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-10-02)
-- Next meeting: 2023-OCT-02
+- Next meeting: 2023-OCT-16
 
 ## Agenda
 - Overview of possible vector-matrix extension approaches - That is, matrix extensions that only use the current architected vector registers to store matrices (Jose and Abel)
