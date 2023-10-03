@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2023-OCT-16
 
 ## Agenda
-- Overview of possible vector-matrix extension approaches - That is, matrix extensions that only use the current architected vector registers to store matrices (Jose and Abel): [PDF](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-10-02/Matrix_2023-OCT-02.pdf)
+- Overview of possible vector-matrix extension approaches - That is, matrix extensions that only use the current architected vector registers to store matrices (Jose and Abel): [PDF](https://github.com/riscv-admin/vector/tree/main/minutes/2023/2023-10-02/Matrix_2023-OCT-02.pdf), [Zoom recording](https://zoom.us/rec/share/I8JOwNXuUMt_mo4w4Jc_OQyyiW7m661AHAZ8RigzI0WfomqcWpiLnh1lShQlOy5N.efRoQP3Hq_tTI1C9?startTime=1696258884000)
 
 ## Refinement of the gap analysis list
 
