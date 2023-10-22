@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2023-OCT-30
 
 ## Agenda
-- Presentation from AndesTech on their work on matrix extensions: [PDF](), [Zoom recording](https://zoom.us/rec/share/wpfWiwdDUwOuQvMYk6-xISeFXP7R24RNxDx1_YRt-pLlXPXJ22Loc5sM4UwV9sZg.P7jho0V0eChMemK_?startTime=1697468598000)
+- Presentation from AndesTech on their work on matrix extensions: [PDF](https://github.com/riscv-admin/vector/blob/main/minutes/2023/2023-10-16/231016_V_SIG_AMM_rel.pdf), [Zoom recording](https://zoom.us/rec/share/wpfWiwdDUwOuQvMYk6-xISeFXP7R24RNxDx1_YRt-pLlXPXJ22Loc5sM4UwV9sZg.P7jho0V0eChMemK_?startTime=1697468598000)
 
 ## Refinement of the gap analysis list
 
