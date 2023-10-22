@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2023-OCT-30
 
 ## Agenda
-- Presentation from AndesTech on their work on matrix extensions.
+- Presentation from AndesTech on their work on matrix extensions: [PDF](), [Zoom recording](https://zoom.us/rec/share/wpfWiwdDUwOuQvMYk6-xISeFXP7R24RNxDx1_YRt-pLlXPXJ22Loc5sM4UwV9sZg.P7jho0V0eChMemK_?startTime=1697468598000)
 
 ## Refinement of the gap analysis list
 
