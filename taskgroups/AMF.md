@@ -22,7 +22,7 @@ The resulting specification will encompass:
 - a review of the interactions of matrix load/store and prefetching of matrices with the RISC-V memory models and a specification of any deviations from the standard RISC-V memory model.
 
 ## Acting leadership
-- Chou Jing (T-Head)
+- Qiu Jing (Alibaba)
 - Philipp Tomsich (VRULL)
 
 ## Proposed workplan
