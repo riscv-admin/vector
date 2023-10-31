@@ -1,5 +1,7 @@
 # Task Group: Attached Matrix Facility
 
+Please refer to https://github.com/riscv-admin/attached-matrix-facility/blob/main/charter.adoc for the most up-to-date group charter.
+
 ## Proposed charter
 Matrix operations are a key operation in deep-learning training and inference for workloads like natural-language processing, recommendation systems, and image recognition.  With the pervasive use of these applications in environments ranging from the datacenter, through IoT to mobile applications, matrix operations for RISC-V should scale across these application domains and apply to high-performance and resource-constrained environments.
 
