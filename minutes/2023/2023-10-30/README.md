@@ -23,7 +23,7 @@ Attendance (# people):
 ## Agenda
 - [Zoom recording]()
 - Vote for proposing the creation of the Integrated Matrix Facility (IMF) Task Group: [Google Form](https://urldefense.proofpoint.com/v2/url?u=https-3A__docs.google.com_forms_d_e_1FAIpQLScdWOaGmqo2TbWg-2DuoNX8ey53-5F-5FfDG-2DT6s3Gn9P0QYpLClRBw_viewform-3Fvc-3D0-26c-3D0-26w-3D1-26flr-3D0-26usp-3Dmail-5Fform-5Flink&d=DwMFaQ&c=jf_iaSHvJObTbx-siA1ZOg&r=C0SyG0JWG8xWeUwVLczbu9pPNKEmO5ojTJXYxMwO-pk&m=2CBd-3OJ5iPdZf2mPEtqSkMKEoJoQE43o9F3RIu5X2_KPhCxtXLjo-JbKhA5DLiQ&s=kEEFCnzFDpD2ZNeMVI8RcVCPIJAJD89PpzCM7Wxf4Tg&e=)
-- Presentation by Abel Bernabeu on Option D for IMF: [PDF]()
+- Presentation by Abel Bernabeu on Option D for IMF: [PDF](https://github.com/riscv-admin/vector/blob/main/minutes/2023/2023-10-30/option-d.pdf)
 
 ## Refinement of the gap analysis list
 
