@@ -51,6 +51,15 @@ Attendance (# people):
     - We need a way to have additional architected masks (beyond v0) and negated forms of masks.
 
 ## Self-contained vector ISA
+- Counting configuration bits (keep vl and vstart as is for now):
+  - vsew: 3 bits
+  - vlmul: 3 bits
+  - vta: 1 bit
+  - vma: 1 bit
+  - vxrm: 2 bits
+  - vxsat: 1 bit
+- That is "only" 11 bits, easily contained in a 64-bit encoding.
+- Which leaves enough space (~20 bits) to encode explicit mask registers, explicit length registers, more vector registers, etc.
 
 ## Current gap analysis list:
 
