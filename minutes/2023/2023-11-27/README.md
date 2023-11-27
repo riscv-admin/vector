@@ -23,7 +23,7 @@ Attendance (# people):
 ## Agenda
 - [Zoom recording]()
 - Update on status of Integrated Matrix Facility (IMF) Task Group proposal.
-- Thoughts on profiles for RISC-V matrix extensions
+- Thoughts on variants for RISC-V matrix extensions
 - Thoughts on sparsity support for RISC-V matrix extensions
 
 ## IMF Task Group Proposal
@@ -32,10 +32,10 @@ Attendance (# people):
 - Earl also had some technical comments. Jose proposed to address them in the TG. Waiting for reply.
 - Rafael, Jose, and Abel working on the next steps for TG formation.
 
-## Profiles for RISC-V matrix extensions
-- AI/ML profile: fp32, fp16?, bfloat16, fp8, int16?, int8, int4?, int2?, boolean?
-- HPC profile: fp32, fp64, complex64?, complex128?
-- Enterprise profile: live migration across different VLENs
+## RISC-V matrix extensions
+- AI/ML extensions: fp32, fp16?, bfloat16, fp8, int16?, int8, int4?, int2?, boolean?
+- HPC extensions: fp32, fp64, complex64?, complex128?
+- Enterprise extensions: live migration across different VLENs
 
 ## Sparsity support for RISC-V matrix extensions
 - [PDF](https://github.com/riscv-admin/vector/blob/main/minutes/2023/2023-11-27/Sparsity.pdf)
