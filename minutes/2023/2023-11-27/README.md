@@ -37,7 +37,7 @@ Attendance (# people):
 - Enterprise profile: live migration across different VLENs
 
 ## Sparsity support for RISC-V matrix extensions
-- [PDF]()
+- [PDF](https://github.com/riscv-admin/vector/blob/main/minutes/2023/2023-11-27/Sparsity.pdf)
 
 ## Current gap analysis list:
 
