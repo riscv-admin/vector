@@ -28,8 +28,9 @@ Attendance (# people):
 
 ## IMF Task Group Proposal
 - We submitted the TG proposal document to Earl and Krste.
-- Krste had some technical comments. I suggested to move them to TG work, but he may want to resolve them before TG is formed.
-- Did not hear back from Earl.
+- Krste had some technical comments. He agreed that they can be addressed by the TG.
+- Earl also had some technical comments. Jose proposed to address them in the TG. Waiting for reply.
+- Rafael, Jose, and Abel working on the next steps for TG formation.
 
 ## Profiles for RISC-V matrix extensions
 - AI/ML profile: fp32, fp16?, bfloat16, fp8, int16?, int8, int4?, int2?, boolean?
