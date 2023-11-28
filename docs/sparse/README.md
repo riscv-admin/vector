@@ -35,3 +35,6 @@ Because we will operate with both sparse and dense matrices, we need the $M$ and
 > \right]
 > ```
 > *Important*: The "missing" values in the contents of the matrix are not "0", they simply *do not exist*.
+
+The definition above is orthogonal to and independent of the data structures used to represent sparse matrices.
+Standard sparse data structure formats, such as COO, CSR, and CSC, can all be used to represent sparse matrices as defined above.
