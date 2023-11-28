@@ -1,3 +1,5 @@
+$a=b$
+
 ## Meeting details
 
 Date: 2023-11-27
