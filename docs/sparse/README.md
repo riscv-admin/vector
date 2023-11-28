@@ -49,7 +49,7 @@ The multiplicative operation $\otimes$ distributes over the additive operation $
 > 
 > In the common arithmetic semiring $`\left\langle \mathbb{R}, +, \times, 0, 1 \right\rangle`$, the additive and multiplicative operations are the usual plus and times of real numbers, and the real values 0 and 1 are the SAID and SMID, respectively.
 > In the min-max semiring $`\left\langle \mathbb{R}, \min(\cdot,\cdot), \max(\cdot,\cdot), +\infty, -\infty \right\rangle`$, the additive operation is the minimum of two real numbers, 
-> the multiplicative operation is the maximum of two real numbers, the SAID is $+\infty% and the SMID is $-\infty$.
+> the multiplicative operation is the maximum of two real numbers, the SAID is $+\infty$ and the SMID is $-\infty$.
 
 The definition of semiring explains why one cannot transform a sparse matrix to a dense matrix by filling the "missing" elements with 0.
 The value of the SAID is a property of the semiring, not the matrix, and is not known until operation time.
