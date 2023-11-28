@@ -14,7 +14,7 @@ The set $`\mathbf{L}(\mathbf{A}) = \{(i,j,A_{ij}\}`$ is called the *content* of 
 (If we were dealing exclusively with sparse matrices, $\mathbf{L}(\mathbf{A})$ would uniquely define $\mathbf{A}$.
 Because we will operate with both sparse and dense matrices, we need the $M$ and $N$ parameters.)
 
-Example: consider the matrix
+> Example: consider the matrix
 ```math
 \mathbf{A} = \left\langle \mathbb{R}, 4, 3, \left\{ (0, 0, 1.0), (0, 2, 0.5), (1, 1, 3.1), (2, 0, 2.0), (2, 1, 1.0), (3,2, 5.0) \right\} \right\rangle.
 ```
