@@ -15,11 +15,13 @@ The set $`\mathbf{L}(\mathbf{A}) = \{(i,j,A_{ij}\}`$ is called the *content* of 
 Because we will operate with both sparse and dense matrices, we need the $M$ and $N$ parameters.)
 
 Example: consider the matrix
-$$\mathbf{A} = \left\langle \mathbb{R}, 4, 3, \left\{ (0, 0, 1.0), (0, 2, -1.0), (1, 1, 3.1) \right\} \right\rangle.$$
+```math
+\mathbf{A} = \left\langle \mathbb{R}, 4, 3, \left\{ (0, 0, 1.0), (0, 2, 0.5), (1, 1, 3.1) \right\} \right\rangle.
+```
 The visual representation of this matrix would be the following:
 ```math
 \begin{array}{ccc}
-1.0  &  \cdot & -1.0 \\
+1.0  &  \cdot & 0.5 \\
 \cdot  & 3.1 & \cdot
 \end{array}
 ```
