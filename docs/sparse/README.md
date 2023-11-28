@@ -41,6 +41,15 @@ Standard sparse data structure formats, such as COO, CSR, and CSC, can all be us
 
 Operations on sparse matrices, including sparse matrix/dense vector- and sparse matrix/dense matrix-multiplication (SpMV and SpMM) are defined on a *semiring*.
 A semiring $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle`$ is defined by a domain $D$, 
-a binary commutative additive operation $\oplus$, a binary multiplicative operation $\otimes$, a semiring addititve identity (SAID) $\mathbf{0} \in D$ ($a \oplus \mathbf{0} = \mathbf{0} \oplus a = a, \forall a \in D$)
+a binary commutative additive operation $\oplus : D \times D \rightarrow D$, a binary multiplicative operation $\otimes: D \times D \rightarrow D$, a semiring addititve identity (SAID) $\mathbf{0} \in D$ ($a \oplus \mathbf{0} = \mathbf{0} \oplus a = a, \forall a \in D$)
 that is also the multiplicative anihalator ($a \otimes \mathbf{0} = \mathbf{0} \otimes a = \mathbf{0}, \forall a \in D$), and a semiring multiplicative identity (SMID) $\mathbf{1} \in D$ ($a \otimes \mathbf{1} = \mathbf{1} \otimes a = a, \forall a \in D$).
 The multiplicative operation $\otimes$ distributes over the additive operation $\oplus$.
+
+> Example:
+> 
+> In the common arithmetic semiring $`\left\langle \mathbb{R}, +, \times, 0, 1 \right\rangle`$, the additive and multiplicative operations are the usual plus and times of real numbers, and the real values 0 and 1 are the SAID and SMID, respectively.
+> In the min-max semiring $'\left\langle \mathbb{R}, \bmin(\cdot,\cdot), \bmax(\cdot,\cdot), +\infty, -\infty \right\rangle`$, the additive operation is the minimum of two real numbers, 
+> the multiplicative operation is the maximum of two real numbers, the SAID is $+\infty% and the SMID is $-infty$.
+
+The definition of semiring explains why one cannot transform a sparse matrix to a dense matrix by filling the "missing" elements with 0.
+The value of the SAID is a property of the semiring, not the matrix, and is not known until operation time.
