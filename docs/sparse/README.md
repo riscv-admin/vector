@@ -20,6 +20,7 @@ Example: consider the matrix
 ```
 The visual representation of this matrix would be the following:
 ```math
+\mathbf{A} = 
 \left[
 \begin{array}{ccc}
 1.0   &      & 0.5   \\
