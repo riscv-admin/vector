@@ -22,10 +22,11 @@ The visual representation of this matrix would be the following:
 ```math
 \left[
 \begin{array}{ccc}
-1.0  &  \cdot & 0.5 \\
-\cdot  & 3.1 & \cdot \\
-2.0 & 1.0  & \\
-  &  &  5.0
+1.0   &      & 0.5   \\
+      & 3.1  &       \\
+2.0   & 1.0  &       \\
+      &      & 5.0
 \end{array}
 \right]
 ```
+*Important*: The "missing" values in the contents of the matrix are not "0", they simply *do not exist*.
