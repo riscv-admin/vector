@@ -16,12 +16,16 @@ Because we will operate with both sparse and dense matrices, we need the $M$ and
 
 Example: consider the matrix
 ```math
-\mathbf{A} = \left\langle \mathbb{R}, 4, 3, \left\{ (0, 0, 1.0), (0, 2, 0.5), (1, 1, 3.1) \right\} \right\rangle.
+\mathbf{A} = \left\langle \mathbb{R}, 4, 3, \left\{ (0, 0, 1.0), (0, 2, 0.5), (1, 1, 3.1), (2, 0, 2.0), (2, 1, 1.0), (3,2, 5.0) \right\} \right\rangle.
 ```
 The visual representation of this matrix would be the following:
 ```math
+\left\[
 \begin{array}{ccc}
 1.0  &  \cdot & 0.5 \\
-\cdot  & 3.1 & \cdot
+\cdot  & 3.1 & \cdot \\
+2.0 & 1.0  & \\
+  &  &  5.0
 \end{array}
+\right\]
 ```
