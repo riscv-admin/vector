@@ -2,6 +2,10 @@
 
 Jose Moreira, IBM Research
 
+---
+> "Though a bitof an exageration, it can be said that a mathematical problem can be solved only if ti can be reduced to a calculation in linear algebra." -- Thomas A. Garrity, All the Math You Missed
+---
+
 ## Introduction
 
 *Sparse linear algebra is not linear algebra with lots of zeroes.*
