@@ -52,4 +52,4 @@ The multiplicative operation $\otimes$ distributes over the additive operation $
 > the multiplicative operation is the maximum of two real numbers, the SAID is $+\infty$ and the SMID is $-\infty$.
 
 The definition of semiring explains why one cannot transform a sparse matrix to a dense matrix by filling the "missing" elements with 0.
-The value of the SAID is a property of the semiring, not the matrix, and is not known until operation time.
+The value of the SAID is a property of the semiring, not the matrix, and is not known until operation time. The sparse matrix must be represented as a sparse matrix.
