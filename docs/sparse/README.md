@@ -17,9 +17,9 @@ Because we will operate with both sparse and dense matrices, we need the $M$ and
 Example: consider the matrix
 $$\mathbf{A} = \left\langle \mathbb{R}, 4, 3, \left\{ (0, 0, 1.0), (0, 2, -1.0), (1, 1, 3.1) \right\} \right\rangle.$$
 The visual representation of this matrix would be the following:
-$$
+```math
 \begin{array}{ccc}
 1.0  &  \cdot & -1.0 \\
 \cdot  & 3.1 & \cdot
 \end{array}
-$$
+```
