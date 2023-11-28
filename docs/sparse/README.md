@@ -38,3 +38,9 @@ Because we will operate with both sparse and dense matrices, we need the $M$ and
 
 The definition above is orthogonal to and independent of the data structures used to represent sparse matrices.
 Standard sparse data structure formats, such as COO, CSR, and CSC, can all be used to represent sparse matrices as defined above.
+
+Operations on sparse matrices, including sparse matrix/dense vector- and sparse matrix/dense matrix-multiplication (SpMV and SpMM) are defined on a *semiring*.
+A semiring $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle$ is defined by a domain $D$, 
+a binary commutative additive operation $\oplus$, a binary multiplicative operation $\otimes$, a semiring addititve identity (SAID) $\mathbf(0) \in D$ ($a \oplus \mathbf(0) = \mathbf(0) \oplus a = a \forall a \in D$)
+that is also the multiplicative anihalator ($ a \otimes \mathbf{0} = \mathbf{0} \otimes a = \mathbf{0} \forall a \in D$), and a semiring multiplicative identity (SMID) $\mathbf{1} \in D$ (a \otimes \mathbf(1) = \mathbf(1) \otimes a = a \forall a \in D$).
+The multiplicative operation $\otimes$ distributes over the additive operation $\oplus$.
