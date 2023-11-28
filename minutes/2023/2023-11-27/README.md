@@ -1,5 +1,7 @@
 $a=b$
 
+$$X=Y$$
+
 ## Meeting details
 
 Date: 2023-11-27
