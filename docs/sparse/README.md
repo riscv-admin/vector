@@ -35,7 +35,11 @@ rectangular array of elements $A[i,j]$, $i \in \mathbb{Z} \cap [0,M), j \in \mat
 > \right\rangle
 > ```
 
-
+The $i$-th row of a dense matrix $\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle$, $i \in \mathbb{Z} \cap [0,M)$ 
+is a dense vector represented as $\mathbf{A}_i$ and defined as
+```math
+\mathbf{A}_i = \left\langle N, A[i, 0:N-1] \right\rangle
+```
 
 ## Sparse matrices
 *A sparse matrix is not a dense matrix with lots of zeroes.*
