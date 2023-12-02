@@ -140,3 +140,15 @@ The multiplicative operation $\otimes$ distributes over the additive operation $
 
 The definition of semiring explains why one cannot transform a sparse matrix to a dense matrix by filling the "missing" elements with 0.
 The value of the SAID is a property of the semiring, not the matrix, and is not known until operation time. The sparse matrix must be represented as a sparse matrix all the way up to and including any operation performed on it. We will explain why converting sparse matrices to dense matrices do not lead to the same computational outcome.
+
+## Sparse/dense vector-outer product
+
+Let $`\mathbf{u} = \left\langle D, M, \{(i,u_{i})\} \right\rangle`$ be a sparse vector.
+Let $`\mathbf{v} = \left\langle D, N, v[0:N-1] \right\rangle`$ be a dense vector.
+Let $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle`$ be a semiring.
+The *outer product* $\mathbf{u} S_{\otimes} \mathbf{v}$ of vectors $u$ and $v$ on semiring $S$ is a 
+sparse matrix defined as
+```math
+\mathbf{u} S_{\otimes} \mathbf{v} = \left\langle D, M, N, \{(i, j, u_{i} \otimes v_{j}) : \forall (i,u_{i}) \in \mathbf{L}(\mathbf{u}), \forall j \in \mathbb{Z} \cap [0,N) \} \right\rangle.
+```
+
