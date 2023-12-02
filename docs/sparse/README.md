@@ -146,9 +146,35 @@ The value of the SAID is a property of the semiring, not the matrix, and is not 
 Let $`\mathbf{u} = \left\langle D, M, \{(i,u_{i})\} \right\rangle`$ be a sparse vector.
 Let $`\mathbf{v} = \left\langle D, N, v[0:N-1] \right\rangle`$ be a dense vector.
 Let $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle`$ be a semiring.
-The *outer product* $\mathbf{u} S_{\otimes} \mathbf{v}$ of vectors $u$ and $v$ on semiring $S$ is a 
+The *outer product* $\mathbf{u} S_{\otimes} \mathbf{v}$ of vectors $\mathbb{u}$ and $\mathbb{v}$ on semiring $S$ is a 
 sparse matrix defined as
 ```math
-\mathbf{u} S_{\otimes} \mathbf{v} = \left\langle D, M, N, \{(i, j, u_{i} \otimes v_{j}) : \forall (i,u_{i}) \in \mathbf{L}(\mathbf{u}), \forall j \in \mathbb{Z} \cap [0,N) \} \right\rangle.
+\mathbf{u} S_{\otimes} \mathbf{v} = \left\langle D, M, N, \{(i, j, u_{i} \otimes v[j]) : \forall (i,u_{i}) \in \mathbf{L}(\mathbf{u}), \forall j \in \mathbb{Z} \cap [0,N) \} \right\rangle.
 ```
-
+> Example:
+>
+> If 
+> ```math
+> \mathbf{u} = \left\langle \mathbb{R}, 4,
+> \left[
+> \begin{array}{c}
+> u_0   \\
+>       \\
+> u_2   \\
+>    
+> \end{array}
+> \right]
+> \right\rangle
+> ,
+> \mathbf{v} = \left\langle \mathbb{R}, 3,
+> \left[
+> \begin{array}{c}
+> v_0   \\
+> v_1   \\
+> v_2   
+> \end{array}
+> \right]
+> \right\rangle
+> ,
+> \left\langle \mathbb{R}, +, \times, 0, 1 \right\rangle
+> ```
