@@ -80,7 +80,7 @@ A particular value $i$ can appear at most once in $\mathbf{v}$.
 The set $`\mathbf{L}(\mathbf{v}) = \{(i,v_{i})\}`$ is called the *content* of vector $\mathbf{v}$.
 (If we were dealing exclusively with sparse vectors, $\mathbf{L}(\mathbf{v})$ would uniquely define $\mathbf{v}$.
 Because we will operate with both sparse and dense vectors, we need the $N$ parameter.)
-The set $\mathbf{I}(\mathbf{v}) = \{ i : (i,v_i) \in \mathbf{L}(\mathbf{v}) \}$ is called the *index set* of vector $\mathbf{v}$.
+The set $`\mathbf{I}(\mathbf{v}) = \{ i : (i,v_i) \in \mathbf{L}(\mathbf{v}) \}`$ is called the *index set* of vector $\mathbf{v}$.
 
 > Example: consider the sparse vector
 > ```math
