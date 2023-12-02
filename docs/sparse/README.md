@@ -21,19 +21,21 @@ A dense matrix $`\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle
 by a domain $D$, its number of rows $M > 0$, its number of columns $N > 0$, and a two-dimensions
 rectangular array of elements $A[i,j]$, $i \in \mathbb{Z} \cap [0,M), j \in \mathbb{Z} \cap [0,N)$.
 
-> Example: consider the matrix
+> Example: consider the dense matrix
 > ```math
 > \mathbf{A} = \left\langle \mathbb{R}, 4, 3,
 > \left[
 > \begin{array}{ccc}
-> 1.0   &      & 0.5   \\
->       & 3.1  & 0.0   \\
-> 2.0   & 1.0  &       \\
->       &      & 5.0
+> 1.0   & 0.0  & 0.5   \\
+> 0.0   & 3.1  & 0.0   \\
+> 2.0   & 1.0  & 0.0   \\
+> 0.0   & 0.0  & 5.0
 > \end{array}
 > \right]
 > \right\rangle
 > ```
+
+
 
 ## Sparse matrices
 *A sparse matrix is not a dense matrix with lots of zeroes.*
@@ -45,7 +47,7 @@ The set $`\mathbf{L}(\mathbf{A}) = \{(i,j,A_{ij}\}`$ is called the *content* of 
 (If we were dealing exclusively with sparse matrices, $\mathbf{L}(\mathbf{A})$ would uniquely define $\mathbf{A}$.
 Because we will operate with both sparse and dense matrices, we need the $M$ and $N$ parameters.)
 
-> Example: consider the matrix
+> Example: consider the sparse matrix
 > ```math
 > \mathbf{A} = \left\langle \mathbb{R}, 4, 3, \left\{ (0, 0, 1.0), (0, 2, 0.5), (1, 1, 3.1), (1, 2, 0.0), (2, 0, 2.0), (2, 1, 1.0), (3,2, 5.0) \right\} \right\rangle.
 > ```
