@@ -130,6 +130,18 @@ Because we will operate with both sparse and dense matrices, we need the $M$ and
 The definition above is orthogonal to and independent of the data structures used to represent sparse matrices.
 Standard sparse data structure formats, such as COO, CSR, and CSC, can all be used to represent sparse matrices as defined above.
 
+The $k$-th row    of a sparse matrix $\mathbf{A} = \left\langle D, M, N, \{(i,j,A_{ij})\} \right\rangle$, $k \in \mathbb{Z} \cap [0,M)$ 
+is a sparse matrix represented as $\mathbf{A}_k$ and defined as
+```math
+\mathbf{A}_k = \left\langle D, N, \{(k,j,A_{kj}) \in \mathbf{L}(\mathbf{A}) \} \right\rangle.
+```
+
+The $k$-th column of a sparse matrix $\mathbf{A} = \left\langle D, M, N, \{(i,j,A_{ij})\} \right\rangle$, $k \in \mathbb{Z} \cap [0,N)$ 
+is a sparse matrix represented as $\mathbf{A}^k$ and defined as
+```math
+\mathbf{A}^k = \left\langle D, M, \{(i,k,A_{ik}) \in \mathbf{L}(\mathbf{A}) \}  \right\rangle.
+```
+
 ## Semirings
 
 Operations on sparse matrices, including sparse matrix/dense vector- and sparse matrix/dense matrix-multiplication (SpMV and SpMM) are defined on a *semiring*.
@@ -152,10 +164,10 @@ The value of the SAID is a property of the semiring, not the matrix, and is not 
 Let $`\mathbf{u} = \left\langle D, M, \{(i,u_{i})\} \right\rangle`$ be a sparse vector.
 Let $`\mathbf{v} = \left\langle D, N, v[0:N-1] \right\rangle`$ be a dense vector.
 Let $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle`$ be a semiring.
-The *outer product* $\mathbf{u} S_{\otimes} \mathbf{v}$ of vectors $\mathbf{u}$ and $\mathbf{v}$ on semiring $S$ is a 
+The *outer product* $\mathbf{u} \otimes \mathbf{v}$ of vectors $\mathbf{u}$ and $\mathbf{v}$ on semiring $S$ is a 
 sparse matrix defined as
 ```math
-\mathbf{u} S_{\otimes} \mathbf{v} = \left\langle D, M, N, \{(i, j, u_{i} \otimes v[j]) : \forall (i,u_{i}) \in \mathbf{L}(\mathbf{u}), \forall j \in \mathbb{Z} \cap [0,N) \} \right\rangle.
+\mathbf{u} \otimes \mathbf{v} = \left\langle D, M, N, \{(i, j, u_{i} \otimes v[j]) : \forall (i,u_{i}) \in \mathbf{L}(\mathbf{u}), \forall j \in \mathbb{Z} \cap [0,N) \} \right\rangle.
 ```
 > Example:
 >
