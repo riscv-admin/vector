@@ -77,9 +77,10 @@ A sparse vector $`\mathbf{v} = \left\langle D, N, \{(i,v_{i})\} \right\rangle`$ 
 a domain $D$, its number of elements $N > 0$, and a set of tuples
 $(i \in \mathbb{Z} \cap [0,N), v_{i} \in D)$.
 A particular value $i$ can appear at most once in $\mathbf{v}$. 
-The set $`\mathbf{L}(\mathbf{v}) = \{(i,v_{i}\}`$ is called the *content* of vector $\mathbf{v}$.
+The set $`\mathbf{L}(\mathbf{v}) = \{(i,v_{i})\}`$ is called the *content* of vector $\mathbf{v}$.
 (If we were dealing exclusively with sparse vectors, $\mathbf{L}(\mathbf{v})$ would uniquely define $\mathbf{v}$.
 Because we will operate with both sparse and dense vectors, we need the $N$ parameter.)
+The set $\matbf{I}(\mathbf{v}) = \{ i : (i,v_i) \in \mathbf{L}(\mathbf{v}) \}$ is called the *index set* of vector $\mathbf{v}$.
 
 > Example: consider the sparse vector
 > ```math
@@ -104,7 +105,7 @@ A sparse matrix $`\mathbf{A} = \left\langle D, M, N, \{(i,j,A_{ij})\} \right\ran
 a domain $D$, its number of rows $M > 0$, its number of columns $N > 0$, and a set of tuples
 $(i \in \mathbb{Z} \cap [0,M), j \in \mathbb{Z} \cap [0,N), A_{ij} \in D)$.
 A particular pair of values $i,j$ can appear at most once in $\mathbf{A}$. 
-The set $`\mathbf{L}(\mathbf{A}) = \{(i,j,A_{ij}\}`$ is called the *content* of matrix $\mathbf{A}$.
+The set $`\mathbf{L}(\mathbf{A}) = \{(i,j,A_{ij})\}`$ is called the *content* of matrix $\mathbf{A}$.
 (If we were dealing exclusively with sparse matrices, $\mathbf{L}(\mathbf{A})$ would uniquely define $\mathbf{A}$.
 Because we will operate with both sparse and dense matrices, we need the $M$ and $N$ parameters.)
 
