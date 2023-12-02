@@ -208,5 +208,5 @@ Let $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle`
 The *rank-1 update* $\mathbf{A} S^{\oplus} (\mathbf{u} S_{\otimes} \mathbf{v})$ of matrix $\mathbf{A}$ by vectors $\mathbf{u}$ and $\mathbf{v}$ on semiring $S$ is a 
 dense matrix $\mathbf{C}$ defined as
 ```math
-\mathbf{C} = \mathbf{A} S^{\oplus} (\mathbf{u} S_{\otimes} \mathbf{v}) = \left\langle D, M, N, C[i,j] = \left\{ \begin{array}{c} A[i,j] \oplus (u_i \otimes v_j) \end{array} \\ A[i,j] \right\}, \forall j \in \mathbb{Z} \cap [0,N) \right\rangle.
+\mathbf{C} = \mathbf{A} S^{\oplus} (\mathbf{u} S_{\otimes} \mathbf{v}) = \left\langle D, M, N, C[i,j] = \left\{ \begin{array}{c} A[i,j] \oplus (u_i \otimes v_j) \\ A[i,j] \end{array} \right\}, \forall j \in \mathbb{Z} \cap [0,N) \right\rangle.
 ```
