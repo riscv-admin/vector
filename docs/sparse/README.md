@@ -180,14 +180,16 @@ sparse matrix defined as
 > ```
 > then
 > ```math
-> \mathbf{u} S_{\otimes} \mathbf{v} = \left\langle D, M, N,
+> \mathbf{u} S_{\otimes} \mathbf{v} = \left\langle \mathbb{R}, 4, 3,
 > \left[
 > \begin{array}{ccc}
 > u_0 v_0  & u_0 v_1  & u_0v_2  \\
 >          &          &         \\
 > u_2 v_0  & u_2 v_1  & u_2v_2  \\
 >          &          &
-> > \end{array}
+> \end{array}
 > \right]
 > \right\rangle
 > ```
+> *Important*: No operations are performed with elements $u_1$ and $u_3$, since they do not exist.
+> This bypasses the problem of having to deal with infinities and NaNs in floating-point numbers.
