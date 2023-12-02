@@ -9,7 +9,20 @@ Jose Moreira, IBM Research
 ## Introduction
 
 *Sparse linear algebra is not linear algebra with lots of zeroes.*
-Sparse linear algebra has its own structure and definitions, meant to directly operate on *sparse matrices*.
+Sparse linear algebra has its own structure and definitions, meant to directly operate on various sparse data structures.
+We define those sparse data structures and their more traditional dense counterparts.
+We also define the various operations that can be performed on sparse data structures, including operations that
+mix dense and sparse data structures.
+The objective is to create a computational model that can be supported by a specialized instruction set architecture.
+
+## Dense matrices
+For completeness, we start with the definition of the more traditional dense matrices, used linear algebra.
+A dense matrix $`\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle`$ is defined
+by a domain $D$, its number of rows $M > 0$, its number of columns $N > 0$, and a two-dimensions
+rectangular array of elements $M[i,j]$, $i \in \mathbb{Z} \cap [0,M), j \in \mathbb{Z} \cap [0,N)$.
+
+## Sparse matrices
+*A sparse matrix is not a dense matrix with lots of zeroes.*
 A sparse matrix $`\mathbf{A} = \left\langle D, M, N, \{(i,j,A_{ij})\} \right\rangle`$ is defined by
 a domain $D$, its number of rows $M > 0$, its number of columns $N > 0$, and a set of tuples
 $(i \in \mathbb{Z} \cap [0,M), j \in \mathbb{Z} \cap [0,N), A_{ij} \in D)$.
@@ -52,4 +65,4 @@ The multiplicative operation $\otimes$ distributes over the additive operation $
 > the multiplicative operation is the maximum of two real numbers, the SAID is $+\infty$ and the SMID is $-\infty$.
 
 The definition of semiring explains why one cannot transform a sparse matrix to a dense matrix by filling the "missing" elements with 0.
-The value of the SAID is a property of the semiring, not the matrix, and is not known until operation time. The sparse matrix must be represented as a sparse matrix.
+The value of the SAID is a property of the semiring, not the matrix, and is not known until operation time. The sparse matrix must be represented as a sparse matrix all the way up to and including any operation performed on it. We will explain why converting sparse matrices to dense matrices do not lead to the same computational outcome.
