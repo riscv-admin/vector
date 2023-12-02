@@ -18,7 +18,7 @@ The objective is to create a computational model that can be supported by a spec
 ## Dense vectors and matrices
 For completeness, we start with the definition of the more traditional dense data structures used in linear algebra.
 
-A dense vector $`\mathbf{v} = \left\lagnle D, N, v[0:N-1] \right\rangle`$ is defined
+A dense vector $`\mathbf{v} = \left\langle D, N, v[0:N-1] \right\rangle`$ is defined
 by a domain $D$, its number of elements $N > 0$, and an one-dimensional
 array of elements $v[i]$, $i \in \mathbb{Z} \cap [0,N)$.
 
