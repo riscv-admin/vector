@@ -198,7 +198,7 @@ sparse matrix defined as
 > ```
 > then
 > ```math
-> \mathbf{u} S_{\otimes} \mathbf{v} = \left\langle \mathbb{R}, 4, 3,
+> \mathbf{u} \otimes \mathbf{v} = \left\langle \mathbb{R}, 4, 3,
 > \left[
 > \begin{array}{ccc}
 > u_0 v_0  & u_0 v_1  & u_0v_2  \\
@@ -218,13 +218,25 @@ Let $`\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle`$ be a den
 Let $`\mathbf{u} = \left\langle D, M, \{(i,u_{i})\} \right\rangle`$ be a sparse vector.
 Let $`\mathbf{v} = \left\langle D, N, v[0:N-1] \right\rangle`$ be a dense vector.
 Let $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle`$ be a semiring.
-The *rank-1 update* $\mathbf{A} S^{\oplus} (\mathbf{u} S_{\otimes} \mathbf{v})$ of matrix $\mathbf{A}$ by vectors $\mathbf{u}$ and $\mathbf{v}$ on semiring $S$ is a 
+The *rank-1 update* $\mathbf{A} \oplus (\mathbf{u} \otimes \mathbf{v})$ of matrix $\mathbf{A}$ by vectors $\mathbf{u}$ and $\mathbf{v}$ on semiring $S$ is a 
 dense matrix $\mathbf{C}$ defined as
 ```math
-\mathbf{C} = \mathbf{A} S^{\oplus} (\mathbf{u} S_{\otimes} \mathbf{v}) = \left\langle D, M, N, C[i,j] = \left\{
+\mathbf{C} = \mathbf{A} \oplus (\mathbf{u} \otimes \mathbf{v}) = \left\langle D, M, N, C[i,j] = \left\{
 \begin{array}{ll}
 A[i,j] \oplus (u_i \otimes v_j) & \forall i \in    \mathbf{I}(\mathbf{u}) \\
 A[i,j]                          & \forall i \notin \mathbf{I}(\mathbf{u})
 \end{array}
 \right\}, \forall j \in \mathbb{Z} \cap [0,N) \right\rangle.
+```
+
+## Sparse/dense generalized matrix-multiply
+
+Let $`\mathbf{C} = \left\langle D, M, N, C[0:M-1,0:N-1] \right\rangle`$ be a dense matrix.
+Let $`\mathbf{A} = \left\langle D, M, K, \{(i,j,A_{ij})\} \right\rangle`$ be a sprse matrix.
+Let $`\mathbf{B} = \left\langle D, K, N, B[0:K-1,0:N-1] \right\rangle`$ be a dense matrix.
+Let $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle`$ be a semiring.
+The *generalized matrix-multiply* $\mathbf{C} \oplus \mathbf{A} \otimes \ldot \oplus \mathbf{B}$ of matrices $\mathbf{C}$, $\mathbf{A}$, and $\mathbf{B}$
+is a dense matrix $\mathbf{R}$ defined as
+```math
+\mathbf{R} = \mathbf{C} \oplus \mathbf{A}^0 \otimes \mathbf{B}_0 + 
 ```
