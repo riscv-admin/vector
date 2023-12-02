@@ -38,13 +38,13 @@ rectangular array of elements $A[i,j]$, $i \in \mathbb{Z} \cap [0,M), j \in \mat
 The $i$-th row of a dense matrix $\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle$, $i \in \mathbb{Z} \cap [0,M)$ 
 is a dense vector represented as $\mathbf{A}_i$ and defined as
 ```math
-\mathbf{A}_i = \left\langle N, A[i, 0:N-1] \right\rangle.
+\mathbf{A}_i = \left\langle D, N, A[i, 0:N-1] \right\rangle.
 ```
 
 The $j$-th column of a dense matrix $\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle$, $j \in \mathbb{Z} \cap [0,N)$ 
 is a dense vector represented as $\mathbf{A}^j$ and defined as
 ```math
-\mathbf{A}^j = \left\langle N, A[0:M-1, j] \right\rangle.
+\mathbf{A}^j = \left\langle D, M, A[0:M-1, j] \right\rangle.
 ```
 
 ## Sparse matrices
@@ -77,6 +77,8 @@ Because we will operate with both sparse and dense matrices, we need the $M$ and
 
 The definition above is orthogonal to and independent of the data structures used to represent sparse matrices.
 Standard sparse data structure formats, such as COO, CSR, and CSC, can all be used to represent sparse matrices as defined above.
+
+## Semirings
 
 Operations on sparse matrices, including sparse matrix/dense vector- and sparse matrix/dense matrix-multiplication (SpMV and SpMM) are defined on a *semiring*.
 A semiring $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle`$ is defined by a domain $D$, 
