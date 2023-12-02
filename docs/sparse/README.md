@@ -199,12 +199,13 @@ sparse matrix defined as
 > *Important*: No operations are performed with elements $u_1$ and $u_3$, since they do not exist.
 > This bypasses the problem of having to deal with infinities and NaNs in floating-point numbers.
 
-## Dense/sparse matrix-addition
+## Dense/sparse rank-1 update
 
 Let $`\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle`$ be a dense matrix.
-Let $`\mathbf{B} = \left\langle D, M, N, \{(i,j,B_{ij})\} \right\rangle`$ be a sparse matrix.
+Let $`\mathbf{u} = \left\langle D, M, \{(i,u_{i})\} \right\rangle`$ be a sparse vector.
+Let $`\mathbf{v} = \left\langle D, N, v[0:N-1] \right\rangle`$ be a dense vector.
 Let $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle`$ be a semiring.
-The *addition* $\mathbf{A} S^{\oplus} \mathbf{B}$ of matrices $\mathbf{A}$ and $\mathbf{B}$ on semiring $S$ is a 
+The *rank-1 update* $\mathbf{A} S^{\oplus} (\mathbf{u} S_{\otimes} \mathbf{v})$ of matrix $\mathbf{A}$ by vectors $\mathbf{u}$ and $\mathbf{v}$ on semiring $S$ is a 
 dense matrix $\mathbf{C}$ defined as
 ```math
 \mathbf{C} = \mathbf{A} S^{\oplus} \mathbf{B} = \left\langle D, M, N, \right\rangle.
