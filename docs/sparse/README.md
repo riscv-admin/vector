@@ -15,10 +15,29 @@ We also define the various operations that can be performed on sparse data struc
 mix dense and sparse data structures.
 The objective is to create a computational model that can be supported by a specialized instruction set architecture.
 
-## Dense matrices
-For completeness, we start with the definition of the more traditional dense matrices used in linear algebra.
+## Dense vectors and matrices
+For completeness, we start with the definition of the more traditional dense data structures used in linear algebra.
+
+A dense vector $`\mathbf{v} = \left\lagnle D, N, v[0:N-1] \right\rangle`$ is defined
+by a domain $D$, its number of elements $N > 0$, and an one-dimensional
+array of elements $v[i]$, $i \in \mathbb{Z} \cap [0,N)$.
+
+> Example: consider the dense vector
+> ```math
+> \mathbf{v} = \left\langle \mathbb{R}, 4,
+> \left[
+> \begin{array}{c}
+> 1.0   \\
+> 0.0   \\
+> 2.0   \\
+> 0.0   
+> \end{array}
+> \right]
+> \right\rangle
+> ```
+
 A dense matrix $`\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle`$ is defined
-by a domain $D$, its number of rows $M > 0$, its number of columns $N > 0$, and a two-dimensions
+by a domain $D$, its number of rows $M > 0$, its number of columns $N > 0$, and a two-dimensional
 rectangular array of elements $A[i,j]$, $i \in \mathbb{Z} \cap [0,M), j \in \mathbb{Z} \cap [0,N)$.
 
 > Example: consider the dense matrix
