@@ -80,7 +80,7 @@ A particular value $i$ can appear at most once in $\mathbf{v}$.
 The set $`\mathbf{L}(\mathbf{v}) = \{(i,v_{i})\}`$ is called the *content* of vector $\mathbf{v}$.
 (If we were dealing exclusively with sparse vectors, $\mathbf{L}(\mathbf{v})$ would uniquely define $\mathbf{v}$.
 Because we will operate with both sparse and dense vectors, we need the $N$ parameter.)
-The set $\matbf{I}(\mathbf{v}) = \{ i : (i,v_i) \in \mathbf{L}(\mathbf{v}) \}$ is called the *index set* of vector $\mathbf{v}$.
+The set $\mathbf{I}(\mathbf{v}) = \{ i : (i,v_i) \in \mathbf{L}(\mathbf{v}) \}$ is called the *index set* of vector $\mathbf{v}$.
 
 > Example: consider the sparse vector
 > ```math
@@ -209,5 +209,10 @@ Let $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle`
 The *rank-1 update* $\mathbf{A} S^{\oplus} (\mathbf{u} S_{\otimes} \mathbf{v})$ of matrix $\mathbf{A}$ by vectors $\mathbf{u}$ and $\mathbf{v}$ on semiring $S$ is a 
 dense matrix $\mathbf{C}$ defined as
 ```math
-\mathbf{C} = \mathbf{A} S^{\oplus} (\mathbf{u} S_{\otimes} \mathbf{v}) = \left\langle D, M, N, C[i,j] = \left\{ \begin{array}{c} A[i,j] \oplus (u_i \otimes v_j) \\ A[i,j] \end{array} \right\}, \forall j \in \mathbb{Z} \cap [0,N) \right\rangle.
+\mathbf{C} = \mathbf{A} S^{\oplus} (\mathbf{u} S_{\otimes} \mathbf{v}) = \left\langle D, M, N, C[i,j] = \left\{
+\begin{array}{ll}
+A[i,j] \oplus (u_i \otimes v_j) & \forall i \in    \mathbf{I}(\mathbf{u}) \\
+A[i,j]                          & \forall i \notin \mathbf{I}(\mathbf{u})
+\end{array}
+\right\}, \forall j \in \mathbb{Z} \cap [0,N) \right\rangle.
 ```
