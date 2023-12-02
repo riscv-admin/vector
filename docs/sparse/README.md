@@ -32,6 +32,7 @@ rectangular array of elements $A[i,j]$, $i \in \mathbb{Z} \cap [0,M), j \in \mat
 >       &      & 5.0
 > \end{array}
 > \right]
+> \right\rangle
 > ```
 
 ## Sparse matrices
