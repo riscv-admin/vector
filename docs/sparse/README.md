@@ -38,7 +38,13 @@ rectangular array of elements $A[i,j]$, $i \in \mathbb{Z} \cap [0,M), j \in \mat
 The $i$-th row of a dense matrix $\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle$, $i \in \mathbb{Z} \cap [0,M)$ 
 is a dense vector represented as $\mathbf{A}_i$ and defined as
 ```math
-\mathbf{A}_i = \left\langle N, A[i, 0:N-1] \right\rangle
+\mathbf{A}_i = \left\langle N, A[i, 0:N-1] \right\rangle.
+```
+
+The $j$-th column of a dense matrix $\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle$, $j \in \mathbb{Z} \cap [0,N)$ 
+is a dense vector represented as $\mathbf{A}^j$ and defined as
+```math
+\mathbf{A}^j = \left\langle N, A[0:M-1, j] \right\rangle.
 ```
 
 ## Sparse matrices
