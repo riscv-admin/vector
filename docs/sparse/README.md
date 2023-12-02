@@ -19,7 +19,7 @@ The objective is to create a computational model that can be supported by a spec
 
 - $\mathbb{R}$ : The set of real numbers.
 - $\mathbb{Z}$ : The set of integer numbers.
-- 
+
 ## Dense vectors and matrices
 For completeness, we start with the definition of the more traditional dense data structures used in linear algebra.
 
