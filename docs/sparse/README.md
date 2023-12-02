@@ -176,5 +176,18 @@ sparse matrix defined as
 > \right]
 > \right\rangle
 > ,
-> \left\langle \mathbb{R}, +, \times, 0, 1 \right\rangle
+> S = \left\langle \mathbb{R}, +, \times, 0, 1 \right\rangle
+> ```
+> then
+> ```math
+> \mathbf{u} S_{\otimes} \mathbf{v} = \left\langle D, M, N,
+> \left[
+> \begin{array}{ccc}
+> u_0 v_0  & u_0 v_1  & u_0v_2  \\
+>          &          &         \\
+> u_2 v_0  & u_2 v_1  & u_2v_2  \\
+>          &          &
+> > \end{array}
+> \right]
+> \right\rangle
 > ```
