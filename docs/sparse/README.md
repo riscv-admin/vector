@@ -20,7 +20,7 @@ For completeness, we start with the definition of the more traditional dense dat
 
 A dense vector $`\mathbf{v} = \left\langle D, N, v[0:N-1] \right\rangle`$ is defined
 by a domain $D$, its number of elements $N > 0$, and an one-dimensional
-array of elements $v[i]$, $i \in \mathbb{Z} \cap [0,N)$.
+array of elements $v[i] \in D$, $i \in \mathbb{Z} \cap [0,N)$.
 
 > Example: consider the dense vector
 > ```math
@@ -38,7 +38,7 @@ array of elements $v[i]$, $i \in \mathbb{Z} \cap [0,N)$.
 
 A dense matrix $`\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle`$ is defined
 by a domain $D$, its number of rows $M > 0$, its number of columns $N > 0$, and a two-dimensional
-rectangular array of elements $A[i,j]$, $i \in \mathbb{Z} \cap [0,M), j \in \mathbb{Z} \cap [0,N)$.
+rectangular array of elements $A[i,j] \in D$, $i \in \mathbb{Z} \cap [0,M), j \in \mathbb{Z} \cap [0,N)$.
 
 > Example: consider the dense matrix
 > ```math
@@ -66,7 +66,34 @@ is a dense vector represented as $\mathbf{A}^j$ and defined as
 \mathbf{A}^j = \left\langle D, M, A[0:M-1, j] \right\rangle.
 ```
 
-## Sparse matrices
+## Sparse vectors and matrices
+*A sparse vector is not a dense vector with lots of zeroes.*
+A sparse vector $`\mathbf{v} = \left\langle D, N, \{(i,v_{i})\} \right\rangle`$ is defined by
+a domain $D$, its number of elements $N > 0$, and a set of tuples
+$(i \in \mathbb{Z} \cap [0,N), A_{i} \in D)$.
+A particular value $i$ can appear at most once in $\mathbf{v}$. 
+The set $`\mathbf{L}(\mathbf{v}) = \{(i,A_{i}\}`$ is called the *content* of vector $\mathbf{v}$.
+(If we were dealing exclusively with sparse vectors, $\mathbf{L}(\mathbf{v})$ would uniquely define $\mathbf{v}$.
+Because we will operate with both sparse and dense vectors, we need the $N$ parameter.)
+
+> Example: consider the sparse vector
+> ```math
+> \mathbf{v} = \left\langle \mathbb{R}, 4, \left\{ (0, 0, 1.0), (2, 0, 2.0) \right\} \right\rangle.
+> ```
+> The visual representation of this matrix would be the following:
+> ```math
+> \mathbf{v} = 
+> \left[
+> \begin{array}{c}
+> 1.0   \\
+>       \\
+> 2.0   \\
+>       
+> \end{array}
+> \right]
+> ```
+> *Important*: The "missing" values in the contents of the vector are not "0", they simply *do not exist*.
+
 *A sparse matrix is not a dense matrix with lots of zeroes.*
 A sparse matrix $`\mathbf{A} = \left\langle D, M, N, \{(i,j,A_{ij})\} \right\rangle`$ is defined by
 a domain $D$, its number of rows $M > 0$, its number of columns $N > 0$, and a set of tuples
