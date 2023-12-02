@@ -70,9 +70,9 @@ is a dense vector represented as $\mathbf{A}^j$ and defined as
 *A sparse vector is not a dense vector with lots of zeroes.*
 A sparse vector $`\mathbf{v} = \left\langle D, N, \{(i,v_{i})\} \right\rangle`$ is defined by
 a domain $D$, its number of elements $N > 0$, and a set of tuples
-$(i \in \mathbb{Z} \cap [0,N), A_{i} \in D)$.
+$(i \in \mathbb{Z} \cap [0,N), v_{i} \in D)$.
 A particular value $i$ can appear at most once in $\mathbf{v}$. 
-The set $`\mathbf{L}(\mathbf{v}) = \{(i,A_{i}\}`$ is called the *content* of vector $\mathbf{v}$.
+The set $`\mathbf{L}(\mathbf{v}) = \{(i,v_{i}\}`$ is called the *content* of vector $\mathbf{v}$.
 (If we were dealing exclusively with sparse vectors, $\mathbf{L}(\mathbf{v})$ would uniquely define $\mathbf{v}$.
 Because we will operate with both sparse and dense vectors, we need the $N$ parameter.)
 
