@@ -16,10 +16,23 @@ mix dense and sparse data structures.
 The objective is to create a computational model that can be supported by a specialized instruction set architecture.
 
 ## Dense matrices
-For completeness, we start with the definition of the more traditional dense matrices, used linear algebra.
+For completeness, we start with the definition of the more traditional dense matrices used in linear algebra.
 A dense matrix $`\mathbf{A} = \left\langle D, M, N, A[0:M-1,0:N-1] \right\rangle`$ is defined
 by a domain $D$, its number of rows $M > 0$, its number of columns $N > 0$, and a two-dimensions
-rectangular array of elements $M[i,j]$, $i \in \mathbb{Z} \cap [0,M), j \in \mathbb{Z} \cap [0,N)$.
+rectangular array of elements $A[i,j]$, $i \in \mathbb{Z} \cap [0,M), j \in \mathbb{Z} \cap [0,N)$.
+
+> Example: consider the matrix
+> ```math
+> \mathbf{A} = \left\langle \mathbb{R}, 4, 3,
+> \left[
+> \begin{array}{ccc}
+> 1.0   &      & 0.5   \\
+>       & 3.1  & 0.0   \\
+> 2.0   & 1.0  &       \\
+>       &      & 5.0
+> \end{array}
+> \right]
+> ```
 
 ## Sparse matrices
 *A sparse matrix is not a dense matrix with lots of zeroes.*
