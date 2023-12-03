@@ -19,6 +19,7 @@ The objective is to create a computational model that can be supported by a spec
 
 - $\mathbb{R}$ : The set of real numbers.
 - $\mathbb{Z}$ : The set of integer numbers.
+- $[a,b)$ : The set $`\{ x \in \mathbb{R} : a \leq x < b\}`$
 
 ## Dense vectors and matrices
 For completeness, we start with the definition of the more traditional dense data structures used in linear algebra.
@@ -240,3 +241,10 @@ is a dense matrix $\mathbf{R}$ defined as
 ```math
 \mathbf{R} = \mathbf{C} \oplus (\mathbf{A}^0 \otimes \mathbf{B}_0) + (\mathbf{A}^1 \otimes \mathbf{B}_1) + \cdots + (\mathbf{A}^{K-1} \otimes \mathbf{B}_{K-1}).
 ```
+
+## Consequences of this formulation
+
+1. *Separation of data and operations*: A sparse vector or matrix is represented in a way that is independent of any semiring used to operate on it. 
+For example, matrices $`\mathbf{A} = \left\langle D, M, K, \{(i,j,A_{ij})\} \right\rangle`$ and $`\mathbf{B} = \left\langle D, K, N, B[0:K-1,0:N-1] \right\rangle`$
+can be mulitplied using either $`\left\langle \mathbb{R}, +, \times, 0, 1 \right\rangle`$ semiring or $`\left\langle \mathbb{R}, \min(\cdot,\cdot), \max(\cdot,\cdot), +\infty, -\infty \right\rangle`$ semiring,
+producing two different results.
