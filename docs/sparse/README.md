@@ -235,8 +235,8 @@ Let $`\mathbf{C} = \left\langle D, M, N, C[0:M-1,0:N-1] \right\rangle`$ be a den
 Let $`\mathbf{A} = \left\langle D, M, K, \{(i,j,A_{ij})\} \right\rangle`$ be a sprse matrix.
 Let $`\mathbf{B} = \left\langle D, K, N, B[0:K-1,0:N-1] \right\rangle`$ be a dense matrix.
 Let $`S = \left\langle D, \oplus, \otimes, \mathbf{0}, \mathbf{1} \right\rangle`$ be a semiring.
-The *generalized matrix-multiply* $\mathbf{C} \oplus \mathbf{A} \otimes \ldot \oplus \mathbf{B}$ of matrices $\mathbf{C}$, $\mathbf{A}$, and $\mathbf{B}$
+The *generalized matrix-multiply* $\mathbf{C} \oplus \mathbf{A} \otimes . \oplus \mathbf{B}$ of matrices $\mathbf{C}$, $\mathbf{A}$, and $\mathbf{B}$
 is a dense matrix $\mathbf{R}$ defined as
 ```math
-\mathbf{R} = \mathbf{C} \oplus \mathbf{A}^0 \otimes \mathbf{B}_0 + 
+\mathbf{R} = \mathbf{C} \oplus (\mathbf{A}^0 \otimes \mathbf{B}_0) + (\mathbf{A}^1 \otimes \mathbf{B}_1) + \cdots + (\mathbf{A}^{K-1} \otimes \mathbf{B}_{K-1}).
 ```
