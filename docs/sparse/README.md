@@ -242,9 +242,16 @@ is a dense matrix $\mathbf{R}$ defined as
 \mathbf{R} = \mathbf{C} \oplus (\mathbf{A}^0 \otimes \mathbf{B}_0) + (\mathbf{A}^1 \otimes \mathbf{B}_1) + \cdots + (\mathbf{A}^{K-1} \otimes \mathbf{B}_{K-1}).
 ```
 
-## Consequences of this formulation
+## Consequences of this formulation of sparse linear algebra
 
 1. *Separation of data and operations*: A sparse vector or matrix is represented in a way that is independent of any semiring used to operate on it. 
 For example, matrices $`\mathbf{A} = \left\langle D, M, K, \{(i,j,A_{ij})\} \right\rangle`$ and $`\mathbf{B} = \left\langle D, K, N, B[0:K-1,0:N-1] \right\rangle`$
 can be mulitplied using either $`\left\langle \mathbb{R}, +, \times, 0, 1 \right\rangle`$ semiring or $`\left\langle \mathbb{R}, \min(\cdot,\cdot), \max(\cdot,\cdot), +\infty, -\infty \right\rangle`$ semiring,
 producing two different results.
+
+1. *Difference between sparse and matrix operations*: Treating a sparse vector or matrix as a dense vector with the "missing" elements filled by the SAID will produce different results.
+In particular, the result of the outer product of two dense vectors is a dense matrix. The result of the outer product of a sparse and a dense vector is a sparse matrix.
+This difference is even more significant when operating in IEEE floating-point and the dense vector has infinities or NaNs. Those values are propagated with dense operations in a way that simply does not happen with sparse operations.
+(The fundamental issue is that floating-point arithmetic is not a semiring. Among other problems, $0 \times \mbox{\sf NaN} = \mbox{\sf NaN} \neq 0$, so $0$ is not the multiplicative anihalator.
+Similar issues arise in a min-max semiring with floating-point numbers.
+Nevertheless, IEEE floating-point is a requirement in any modern computer architecture.)
