@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2023-NOV-27
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://drive.google.com/file/d/1suIWSiWUmC1AdWcUYXlPqmF-AZHIfUnA/view?usp=drive_link)
 - Update on status of Integrated Matrix Facility (IMF) Task Group proposal.
 - Update on RISC-V Summit North America.
 - Update on RISC-V Workshop at SC23 (need a volunteer that was there!).
