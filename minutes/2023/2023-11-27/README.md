@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2023-DEC-11 (Last meeting of CY2023)
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://drive.google.com/file/d/1Af9TfZFgrcvwtPcvr0LKqhRVkS05a5HW/view?usp=drive_link)
 - Update on status of Integrated Matrix Facility (IMF) Task Group proposal.
 - Thoughts on variants for RISC-V matrix extensions
 - Thoughts on sparsity support for RISC-V matrix extensions
