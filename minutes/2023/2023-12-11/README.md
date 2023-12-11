@@ -36,7 +36,7 @@ Attendance (# people):
 
 ## Sparsity support for RISC-V matrix extensions
 - [PDF](https://github.com/riscv-admin/vector/blob/main/minutes/2023/2023-11-27/Sparsity.pdf)
-- [Overview of sparse linear algebra](https://github.com/joseemoreira/vector/blob/main/docs/sparse/README.md)
+- [Overview of sparse linear algebra](https://github.com/riscv-admin/vector/tree/main/docs/sparse)
 - [Sample SpMM code](https://github.com/riscv-admin/vector/tree/main/src/SpMM)
 
 ## Current gap analysis list:
