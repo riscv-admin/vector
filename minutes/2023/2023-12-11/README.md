@@ -38,6 +38,7 @@ Attendance (# people):
 - [PDF](https://github.com/riscv-admin/vector/blob/main/minutes/2023/2023-11-27/Sparsity.pdf)
 - [Overview of sparse linear algebra](https://github.com/riscv-admin/vector/tree/main/docs/sparse)
 - [Sample SpMM code](https://github.com/riscv-admin/vector/tree/main/src/SpMM)
+- Overview of the work by the T-head Alibaba team
 
 ## Current gap analysis list:
 
