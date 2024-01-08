@@ -28,7 +28,7 @@ Attendance (# people):
 
 ## Integrated Matrix Extensions (IME) Task Group resources
 - [Groups.io](https://lists.riscv.org/g/tech-integrated-matrix-extension)
-- [Charter](https://github.com/riscv-admin/integrated-matrix-extension)
+- [Github](https://github.com/riscv-admin/integrated-matrix-extension)
 - [Zoom](https://zoom.us/j/93397157767?pwd=UE0vbWJEU0dFSXR4dlp5NGZjaUJJdz09) Meeting ID: 933 9715 7767, Passcode: 051351
 - Guido Araujo is the acting chair for the IME TG.
 - Jose Moreira is the acting vice-chair for the IME TG.
