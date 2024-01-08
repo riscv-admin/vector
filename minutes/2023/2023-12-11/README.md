@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2024-JAN-08 (First meeting of CY2024)
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://drive.google.com/file/d/1c0rhauoXrBlKz92-Cix74e2sV0RQ4F0r/view?usp=drive_link)
 - Update on status of Integrated Matrix Extensions (IME) Task Group proposal.
 - Thoughts on variants for RISC-V matrix extensions
 - Thoughts on sparsity support for RISC-V matrix extensions
@@ -38,7 +38,7 @@ Attendance (# people):
 - [PDF](https://github.com/riscv-admin/vector/blob/main/minutes/2023/2023-11-27/Sparsity.pdf)
 - [Overview of sparse linear algebra](https://github.com/riscv-admin/vector/tree/main/docs/sparse)
 - [Sample SpMM code](https://github.com/riscv-admin/vector/tree/main/src/SpMM)
-- Overview of the work by the T-head Alibaba team
+- Overview of the work by the T-head Alibaba team on sparsity support: [PDF](https://github.com/riscv-admin/vector/blob/main/minutes/2023/2023-12-11/Xuantie_Matrix_Extension_about_Sparsity.pdf)
 
 ## Current gap analysis list:
 
