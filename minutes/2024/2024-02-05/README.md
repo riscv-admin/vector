@@ -23,7 +23,7 @@ Attendance (# people):
 ## Agenda
 - [Zoom recording]()
 - AME meeting schedule.
-- IME meeting schedule.
+- IME meeting schedule. (Same time as the Vector SIG meeting, alternating weeks.)
 - Vector SIG meeting on February 19th, President's Day.
 - Developments in the matrix extensions work.
 
