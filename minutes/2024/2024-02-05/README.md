@@ -25,6 +25,7 @@ Attendance (# people):
 - AME meeting schedule.
 - IME meeting schedule.
 - Vector SIG meeting on February 19th, President's Day.
+- Developments in the matrix extensions work.
 
 ## Integrated Matrix Extensions (IME) Task Group resources
 - [Groups.io](https://lists.riscv.org/g/tech-integrated-matrix-extension)
