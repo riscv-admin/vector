@@ -1,6 +1,6 @@
 ## Meeting details
 
-Date: 2024-02-14
+Date: 2024-02-19
 Time: 17:00 (CET), 08:00 (PDT), 11:00 (EDT)
 
 Attendance (# people):
@@ -22,9 +22,9 @@ Attendance (# people):
 
 ## Agenda
 - [Zoom recording]()
-- AME meeting schedule.
-- IME meeting schedule. (Same time as the Vector SIG meeting, alternating weeks.)
-- Vector SIG meeting on February 19th, President's Day.
+- AME meeting schedule: next meeting on 2024-02-26, and starting on 2024-03-04 same weeks as Vector SIG meeting, 10:00 ET.
+- IME meeting schedule: proposal to move to 10:00 ET, alternating weeks with Vector SIG meeting.
+- Start a working group on explicit encoding of vector operations.
 - Developments in the matrix extensions work.
 
 ## Integrated Matrix Extensions (IME) Task Group resources
