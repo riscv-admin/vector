@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2024-FEB-19?
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://drive.google.com/file/d/1TSgi-NgzRR1v2oKygQTu09TeLUTAq0ut/view?usp=sharing)
 - AME meeting schedule.
 - IME meeting schedule. (Same time as the Vector SIG meeting, alternating weeks.)
 - Vector SIG meeting on February 19th, President's Day.
