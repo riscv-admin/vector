@@ -26,6 +26,8 @@ Attendance (# people):
 - IME meeting schedule: proposal to move to 10:00 ET, alternating weeks with Vector SIG meeting.
 - Start a working group on explicit encoding of vector operations.
 - Developments in the matrix extensions work.
+- Topics for upcoming Vector SIG work: (1) Self-contained vector instructions, (2) GPU-like capabilities, (3) Subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors.
+- Abel to invite Blaise Paschal to give a talk about GPU-like capabiliies on RISC-V.
 
 ## Integrated Matrix Extensions (IME) Task Group resources
 - [Groups.io](https://lists.riscv.org/g/tech-integrated-matrix-extension)
