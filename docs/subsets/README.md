@@ -1,4 +1,4 @@
-# Proposed standard subsets of RISC-V vector extensions
+# Standard subsets of RISC-V vector extensions
 
 ## Why
 
