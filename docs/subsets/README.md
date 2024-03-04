@@ -2,7 +2,7 @@
 
 ## Why
 
-Defining standard subsets of the RISC-V vector extensions let specific implementations to focus on a particular application scope while remaining compliant and compatible with other implementations in the same scope.
+Defining standard subsets of the RISC-V vector extensions allow specific implementations to focus on a particular application scope while remaining compliant and compatible with other implementations in the same scope.
 Without those standard subsets, implementors are more likely to develop their own custom subsets.
 Even if those subsets follow the general guidelines of RISC-V vector extensions, they can still cause significant fragmentation of the ISA.
 
