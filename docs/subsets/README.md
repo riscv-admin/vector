@@ -40,7 +40,7 @@ This is almost like an *inline co-processor* mode.
 
 ## Candidate standard subsets
 
-- Enterprise: Full support of all data types and functionality
-- HPC: Full support of all current daty types and functionality, skip any future decimal floating-point.
+- Enterprise: Full support of all data types and functionality.
+- HPC: Full support of all current data types and functionality, skip any future decimal floating-point.
 - Deep learning: Floating-point and integer up to 32 bits (already there), does not require strided or indexed memory addressing.
-- Lightweight deep learning: Floating-point and integer up to 16 bits does not required strided or indexed memory addressing.
+- Lightweight deep learning: Floating-point and/or integer up to 16 bits, does not required strided or indexed memory addressing.
