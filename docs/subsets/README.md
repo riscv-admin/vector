@@ -27,6 +27,7 @@ Possible functionality that can be optional:
 - Masked operations
 - Indexed and strided memory addressing
 - Restart and/or partial execution (any failure requires full re-execution)
+- Restrictions on LMUL values (e.g., LMUL=1 only)
 
 ### Scalar vs Vector execution properties
 
