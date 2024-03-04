@@ -17,7 +17,7 @@ Attendance (# people):
 
 - We meet every other Monday, 11:00-12:00 ET
 - Previous meetings: [2024-JAN-08](https://github.com/riscv-admin/vector/tree/main/minutes/2024/2024-01-08), [2024-JAN-22](https://github.com/riscv-admin/vector/tree/main/minutes/2024/2024-01-22), [2024-FEB-05](https://github.com/riscv-admin/vector/tree/main/minutes/2024/2024-02-05), [2024-FEB-19](https://github.com/riscv-admin/vector/tree/main/minutes/2024/2024-02-19)
-- Current meeting: [2024-FEB-19](https://github.com/riscv-admin/vector/tree/main/minutes/2024/2024-03-04)
+- Current meeting: [2024-MAR-04](https://github.com/riscv-admin/vector/tree/main/minutes/2024/2024-03-04)
 - Next meeting: 2024-MAR-18
 
 ## Agenda
