@@ -23,8 +23,24 @@ This is more like supersetting than subsetting, so maybe it does not belong in t
 
 ### Functionality
 
+Possible functionality that can be optional:
+- Masked operations
+- Indexed and strided memory addressing
+- Restart and/or partial execution (any failure requires full re-execution)
+
 ### Scalar vs Vector execution properties
 
 Can we require a less strict memory order between scalar and vector instructions?
 This could open the door to more efficient (performance/power/area) implementation of the vector operations.
 
+Even more agressively, can we treat scalar and vector instructions as two independent streams?
+Control-flow would remain the same, but all data dependences would apply only intra-stream.
+Synchronization instructions between the two independent streams would be necessary.
+This is almost like an *inline co-processor* mode.
+
+## Candidate standard subsets
+
+- Enterprise: Full support of all data types and functionality
+- HPC: Full support of all current daty types and functionality, skip any future decimal floating-point.
+- Deep learning: Floating-point and integer up to 32 bits (already there), does not require strided or indexed memory addressing.
+- Lightweight deep learning: Floating-point and integer up to 16 bits does not required strided or indexed memory addressing.
