@@ -44,3 +44,4 @@ This is almost like an *inline co-processor* mode.
 - HPC: Full support of all current data types and functionality, skip any future decimal floating-point.
 - Deep learning: Floating-point and integer up to 32 bits (already there), does not require strided or indexed memory addressing.
 - Lightweight deep learning: Floating-point and/or integer up to 16 bits, does not required strided or indexed memory addressing.
+- Export-controlled safe: Avoids government-protected IP that can be used worldwide.
