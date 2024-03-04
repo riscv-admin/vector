@@ -6,7 +6,7 @@ Defining standard subsets of the RISC-V vector extensions let specific implement
 Without those standard subsets, implementors are more likely to develop their own custom subsets.
 Even if those subsets follow the general guidelines of RISC-V vector extensions, they can still cause significant fragmentation of the ISA.
 
-*Note*: [Chapter 18](https://github.com/riscv/riscv-v-spec/blob/master/v-spec.adoc#sec-vector-extensions) of the [RISC-V "V" Vector Extension}(https://github.com/riscv/riscv-v-spec/blob/master/v-spec.adoc) already defines a set of standard vector extensions. 
+*Note*: [Chapter 18](https://github.com/riscv/riscv-v-spec/blob/master/v-spec.adoc#sec-vector-extensions) of the [RISC-V "V" Vector Extension](https://github.com/riscv/riscv-v-spec/blob/master/v-spec.adoc) already defines a set of standard vector extensions. 
 We must consider going beyond what is already there.
 
 ## How (possible axes of subsetting)
