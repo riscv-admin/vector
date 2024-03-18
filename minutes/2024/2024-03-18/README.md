@@ -23,6 +23,7 @@ Attendance (# people):
 ## Agenda
 - [Zoom recording]()
 - Main topic: Continue discussion on subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors.
+- [Presentation by Abel](https://docs.google.com/presentation/d/11pUxzUlImPa9rjRi_txYvz3FNEdOMBp9IFQdXVqcUD4/edit#slide=id.p)
 - Backup topic: Self-contained vector instructions.
 
 ### Subsetting of existing RISC-V V extensions
