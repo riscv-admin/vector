@@ -30,7 +30,11 @@ Attendance (# people):
 - [Youtube: A RISC V Based Linear Algebra Accelerator For SoC Designs](https://www.youtube.com/watch?v=Ww5XEVGBsLw)
 - [LACore: A Supercomputing-Like Linear Algebra Accelerator for SoC-Based Designs](https://ieeexplore.ieee.org/document/8119202)
 - [Github: LACore Master Repository](https://github.com/scale-lab/la-core)
-
+- [Embedded Supercomputing in FPGAs with the VectorBlox MXP Matrix Processor](https://people.ece.ubc.ca/~lemieux/publications/severance-codes2013.pdf)
+- [Soft Vector Processors with Streaming Pipelines](https://people.ece.ubc.ca/~lemieux/publications/severance-fpga2014.pdf)
+- [TI Advanced Scientific Computer](https://en.wikipedia.org/wiki/TI_Advanced_Scientific_Computer)
+- [CDC STAR-100](https://en.wikipedia.org/wiki/CDC_STAR-100)
+- [ILLIAC IV](https://en.wikipedia.org/wiki/ILLIAC_IV)
 
 ## Integrated Matrix Extensions (IME) Task Group resources
 - [Groups.io](https://lists.riscv.org/g/tech-integrated-matrix-extension)
