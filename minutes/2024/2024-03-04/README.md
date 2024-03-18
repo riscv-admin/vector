@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2024-MAR-18
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://zoom.us/rec/play/XopOIwA8PQmhmlZKBsdwGcJCDmIlWRhPneWZeF3Iz7NJYWbjjkXZWhVr08-Y8J96itRJaeAHq1V2KAk.yaBWVaz33HhBDPSi?canPlayFromShare=true&from=share_recording_detail&startTime=1709568071000&componentName=rec-play&originRequestUrl=https%3A%2F%2Fzoom.us%2Frec%2Fshare%2FaWiioO8piFDu3d27HMeI0gO1WWSGSryuVGwiHxnF73RLd2WKpMow4PPoYzn-h5Wd.tgiiFF-Wht_vMRGj%3FstartTime%3D1709568071000)
 - Topics for upcoming Vector SIG work: (1) Subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors (clear 1st); (2) Self-contained vector instructions (clear 2nd).
 
 ## Reference materials (from Guy Lemieux)
