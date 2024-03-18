@@ -22,7 +22,21 @@ Attendance (# people):
 
 ## Agenda
 - [Zoom recording]()
-- Topics for upcoming Vector SIG work: (1) Subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors (clear 1st); (2) Self-contained vector instructions (clear 2nd).
+- Main topic: Continue discussion on subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors.
+- Backup topic: Self-contained vector instructions.
+
+### Subsetting of existing RISC-V V extensions
+- Does RISC-V publish a *process* for subsetting and then vendors follow that process to produce a *legal subset*?
+- Does RISC-V publish a list of *legal subsets*, presumably derived by following the process mentioned above?
+
+### Jose's wishlist for self-contained vector instructions
+- Explicit type identifier (subsumes but goes beyond SEW, like floating-point vs fixed-point). (6 bits)
+- Explicit LMUL value. (3 bits)
+- Vector mask register specifier. (5 bits)
+- Vector tail agnostic and mask agnostic flags. (2 bits)
+- Vector mask register polarity flag. (1 bit)
+- Vector rounding mode register (fixed- and floating-point). (2 bits)
+- Larger vector register file. (64/128/256 registers?) (4/8/12 additional bits)
 
 ## Integrated Matrix Extensions (IME) Task Group resources
 - [Groups.io](https://lists.riscv.org/g/tech-integrated-matrix-extension)
