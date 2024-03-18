@@ -25,6 +25,7 @@ Attendance (# people):
 - Topics for upcoming Vector SIG work: (1) Subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors (clear 1st); (2) Self-contained vector instructions (clear 2nd).
 
 ## Reference materials (from Guy Lemieux)
+- [RVV-lite v0.5: A Modest Proposal for Reducing the RISC-V Vector Extension](2023_RISC_V_Summit_Europe_RVV_lite___FINAL.pdf)
 - [Thesis covering RVV-lite design issues](https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0431080)
 - [Slides: A RISC V Based Linear Algebra Accelerator For SoC Designs](https://riscv.org/wp-content/uploads/2017/12/Wed1612_linear_algebra_Steffl.pdf)
 - [Youtube: A RISC V Based Linear Algebra Accelerator For SoC Designs](https://www.youtube.com/watch?v=Ww5XEVGBsLw)
