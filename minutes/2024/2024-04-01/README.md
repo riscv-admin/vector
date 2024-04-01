@@ -48,9 +48,13 @@ Attendance (# people):
 
 #### 64-bit vv-encoding for vector arithmetic instructions
 
-| prefix (7 bits) | major (5 bits) | vd (7 bits) | variant (3 bits) | vs1 (7 bits) | vs2 (7 bits) | vm (7 bits) | function (7 bits) | polarity (1 bit) | type (6 bits) | LMUL (3 bits) | vtma (2 bits) | vrnd (2 bits) |
-|-----------------|----------------|-------------|------------------|--------------|--------------|-------------|-------------------|------------------|---------------|---------------|---------------|---------------|          
-| 0111111         | bbbbb          |  0-127      | 0-7              | 0-127        | 0-127        | 0-127       | 0-127             | 0-1              | 0-63          | 0-7           | 0-3           | 0-3           |
+| prefix (7 bits) | major (5 bits) | vd (7 bits) | variant (3 bits) | vs1 (7 bits) | vs2 (7 bits) | vm (7 bits) | function (7 bits) | mask? (1 bit) | polarity (1 bit) | type (6 bits) | LMUL (3 bits) | vtma (2 bits) | vrnd (2 bits) |
+|-----------------|----------------|-------------|------------------|--------------|--------------|-------------|-------------------|---------------|------------------|---------------|---------------|---------------|---------------|          
+| 0111111         | bbbbb          |  0-127      | 0-7              | 0-127        | 0-127        | 0-127       | 0-127             | 0-1           | 0-1              | 0-63          | 0-7           | 0-3           | 0-3           |
+
+| prefix (7 bits) | major (5 bits) | vd (7 bits) | variant (3 bits) | vs1 (7 bits) | vs2 (7 bits) | vm (7 bits) | function (6 bits) | mask? (1 bit) | polarity (1 bit) | type (9 bits) | LMUL (3 bits) | vtma (2 bits) | vrnd (2 bits) |
+|-----------------|----------------|-------------|------------------|--------------|--------------|-------------|-------------------|---------------|------------------|---------------|---------------|---------------|---------------|          
+| 0111111         | bbbbb          |  0-127      | 0-7              | 0-127        | 0-127        | 0-127       | 0-63              | 0-1           | 0-1              | 3 x 0-7       | 0-7           | 0-3           | 0-3           |
 
 ## Integrated Matrix Extensions (IME) Task Group resources
 - [Groups.io](https://lists.riscv.org/g/tech-integrated-matrix-extension)
