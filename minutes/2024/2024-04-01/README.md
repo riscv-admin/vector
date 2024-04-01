@@ -38,6 +38,14 @@ Attendance (# people):
 - Vector rounding mode register (fixed- and floating-point). (2 bits)
 - Larger vector register file. (64/128/256 registers?) (4/8/12 additional bits)
 
+### A strawman for 64-bit vector encoding
+
+#### 32-bit vv-encoding for vector arithmetic instructions
+
+| major (7 bits) | vd (5 bits) | variant (3 bits) | vs1 (5 bits) | vs2 (5 bits) | vm (1 bit) | function (6 bits) |
+|----------------|-------------|------------------|--------------|--------------|------------|-------------------|          
+| 0x57           |  0-31       |                  |              |              |            |                   |
+
 ## Integrated Matrix Extensions (IME) Task Group resources
 - [Groups.io](https://lists.riscv.org/g/tech-integrated-matrix-extension)
 - [Github](https://github.com/riscv-admin/integrated-matrix-extension)
