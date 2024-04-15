@@ -40,8 +40,8 @@ Attendance (# people):
 - Larger vector register file. (64/128/256 registers?) (4/8/12 additional bits)
 
 ### Other wishlist items from Vector SIG members
-- Ability to encode large numbers of vector registers (256+) - Abel
-- Separate vector mask registers - Ken
+- Ability to encode large numbers of vector registers (256+) - Abel (will present reasons for large register files on 04/29)
+- Separate vector mask registers - Ken (Allen will present an approach to encoding more mask registers/separate mask registers)
 - More detailed type specification (e.g., 5 bits per register?) - ???
 - More bits for rounding mode (e.g., 3 bits) - Nicolas
 - More general metadata for vector register data - Guy
