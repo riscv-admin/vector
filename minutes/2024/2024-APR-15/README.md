@@ -39,6 +39,12 @@ Attendance (# people):
 - Vector rounding mode register (fixed- and floating-point). (2 bits)
 - Larger vector register file. (64/128/256 registers?) (4/8/12 additional bits)
 
+### Other wishlist items from Vector SIG members
+- Ability to encode large numbers of vector registers (256+) - Abel
+- Separate vector mask registers - Ken
+- More detailed type specification (e.g., 5 bits per register?) - ???
+- More bits for rounding mode (e.g., 3 bits) - Nicolas
+
 ### A strawman for 64-bit vector encoding
 
 #### 32-bit vv-encoding for vector arithmetic instructions
