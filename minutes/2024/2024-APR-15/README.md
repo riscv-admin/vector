@@ -24,6 +24,7 @@ Attendance (# people):
 - [Zoom recording]()
 - Main topic: Continue discussion on subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors.
 - Backup topic: Self-contained vector instructions.
+- [Indirect register addressing](https://dl.acm.org/doi/10.1145/1128022.1128062)
 
 ### Subsetting of existing RISC-V V extensions
 - Does RISC-V publish a *process* for subsetting and then vendors follow that process to produce a *legal subset*?
