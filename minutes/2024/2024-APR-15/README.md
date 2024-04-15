@@ -44,6 +44,7 @@ Attendance (# people):
 - Separate vector mask registers - Ken
 - More detailed type specification (e.g., 5 bits per register?) - ???
 - More bits for rounding mode (e.g., 3 bits) - Nicolas
+- More general metadata for vector register data - Guy
 
 ### A strawman for 64-bit vector encoding
 
