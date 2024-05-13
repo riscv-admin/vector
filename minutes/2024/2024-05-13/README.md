@@ -22,7 +22,7 @@ Attendance (# people):
 
 ## Agenda
 - [Zoom recording]()
-- Abel's presentation on increasing the number of architected vector registers.
+- Jose's presentation on emulating SIMT (GPU) behavior using vector architectures.
 - Backup topic: Continue discussion on subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors.
 
 ### Subsetting of existing RISC-V V extensions
