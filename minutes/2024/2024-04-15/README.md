@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2024-APR-29
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://zoom.us/rec/share/2ARf_wXm-gBBRwz9yDjIgzlFvqDSAf45yG8VRhHUsQUso6V56ZdlAfbX7WQ65AzT.eRYopQy83qFlUFfh)
 - Main topic: Continue discussion on subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors.
 - Backup topic: Self-contained vector instructions.
 - [Indirect register addressing](https://dl.acm.org/doi/10.1145/1128022.1128062)
