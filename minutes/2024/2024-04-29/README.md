@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2024-MAY-13
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://zoom.us/rec/share/9ykR6YTSrj15HCBjYvMCE5ZpMqh78Y-lv9JotrgPmhe8fAp-oHjSVB-Ppr9rGTb2.dM87hnQyQS3Q968b)
 - Abel's presentation on increasing the number of architected vector registers.
 - Backup topic: Continue discussion on subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors.
 
