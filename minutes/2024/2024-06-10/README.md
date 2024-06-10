@@ -22,7 +22,7 @@ Attendance (# people):
 
 ## Agenda
 - [Zoom recording]()
-- Take 2 on emulating SIMT (GPU) behavior using vector architectures [PDF](SIMT_emulation.pdf).
+- Take 2 on emulating SIMT (GPU) behavior using vector architectures [PDF](SIMT emulation.pdf).
 - Backup topic: Continue discussion on subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors.
 
 ### Subsetting of existing RISC-V V extensions
