@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2024-JUN-10 (May 27th is Memorial Day in the United States)
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://zoom.us/rec/share/o2yTPvgZZRAIbQr_p8OZgp8V1R5wXfI5Yxo27nrS50IXnBql6M70eDLkvlAgWfSA.MhtvGgD_SVnGsLER?startTime=1715612556000)
 - Jose's presentation on emulating SIMT (GPU) behavior using vector architectures [PDF](SIMT_through_SIMD.pdf).
 - Backup topic: Continue discussion on subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors.
 
