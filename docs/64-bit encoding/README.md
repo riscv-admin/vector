@@ -41,3 +41,12 @@ If we think of SIMT models of execution, with mixed data types, 256 registers is
 If a vector register can store $n$ elements of size 1 byte, we would need 8 registers to hold the same $n$ elements of size 8 bytes.
 The current architecture defines 32 general purpose scalar registers and 32 vector registers.
 Therefore, $256 = 8 \times 32$ is not an unreasonable number.
+
+### A simple example: BLAS daxpy
+
+The BLAS `daxpy` routines computes $y \leftarrow \alpha x + y$. 
+The scalar $\alpha$ and vectors $x$ and $y$ are of type double-precision (${\sf fp64}$).
+A simplified signature is
+<code>
+void daxpy(int n, double alpha, double *x, double *y);
+<\code>
