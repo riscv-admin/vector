@@ -59,7 +59,7 @@ A simplified signature is
 
 Using existing RISC-V vector instructions, the routine can be coded as follows:
 
-<code>
+~~~
 # Let a0 = n (number of elements)
 # Let fa0 = alpha (scalar multiplier)
 # Let a1 = address of x vector
@@ -91,4 +91,4 @@ loop:
 end:
     # Exit point
     ret
-</code>
+~~~
