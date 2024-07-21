@@ -12,16 +12,7 @@
 |----------------|-------------|------------------|--------------|--------------|-------------|-------------------|------------------|-------------------|-------------------|---------------|---------------|---------------|----------------------------------|-----------------|          
 | 0x57           |  $0:255$    | $0:7$            | $0:255$      | $0:255$      | $0:7$       | $0:1$             | $0:3$            | $0:3$             | $0:3$             | $0:7$         | $0:3$         | $0:3$         | bbbnnn <br> ${\sf nnn} \neq 111$ | 1111111         |
 
-The `type` fields in the instruction are used to encode the `sizeof` the elemental types for the destination (`vd`) and source (`vs1`, `vs2`) vector registers, according to the following table:
-
-| `type` ($T$) | `sizeof`($T$) |
-|--------------|---------------|
-| 0            | 1 byte        |
-| 1            | 2 bytes       |
-| 2            | 4 bytes       |
-| 3            | 8 bytes       |
-
-The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${\sf EMUL}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf LMUL}$) for that register.
+### Summary of encoding format changes
 
 The additional 32 bits of space in a 64-bit encoding are consumed as follows:
 
@@ -35,6 +26,20 @@ The additional 32 bits of space in a 64-bit encoding are consumed as follows:
 | 3 bits     | explicit group multiplier (LMUL)                                                                                |
 | 2 bits     | explicit tail and mask agnostic flags                                                                           |
 | 2 bits     | explicit rounding mode                                                                                          |
+
+### Tyoe information
+
+The `type` fields in the instruction are used to encode the `sizeof` the elemental types for the destination (`vd`) and source (`vs1`, `vs2`) vector registers, according to the following table:
+
+| `type` ($T$) | `sizeof`($T$) |
+|--------------|---------------|
+| 0            | 1 byte        |
+| 1            | 2 bytes       |
+| 2            | 4 bytes       |
+| 3            | 8 bytes       |
+
+The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${\sf EMUL}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf LMUL}$) for that register.
+This ensures that, in mixed-type instructions, all registers have the same number of elements.
 
 ### Do we really need 256 architected vector registers?
 
