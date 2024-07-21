@@ -2,7 +2,7 @@
 
 #### 32-bit vv-encoding for vector arithmetic instructions (size of field in bits)
 
-| major <br> (7) | vd <br> (5) | variant <br< (3) | vs1 <br> (5) | vs2 <br> (5) | vm <br> (1) | function <br> (6) |
+| major <br> (7) | vd <br> (5) | variant <br> (3) | vs1 <br> (5) | vs2 <br> (5) | vm <br> (1) | function <br> (6) |
 |----------------|-------------|------------------|--------------|--------------|-------------|-------------------|          
 | 0x57           |  0-31       | 0-7              | 0-31         | 0-31         | 0-1         | 0-63              |
 
