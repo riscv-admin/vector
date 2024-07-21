@@ -101,29 +101,65 @@ The exact same dynamic behavior (isomorphic instruction trace) can be achieved u
 # Let a2 = address of y vector
 
 # Register setup
-xvsetvli t0, zero, LMUL=1/8                 # Set the vector length to the number of 64-bit elements in a vector register
-xvl  t1, fp64, t0                           # Load the vector length in bytes to t1
+xvsetvli t0, zero, LMUL=1/8                                  # Set the vector length to the number of bytes in 1/8th of a vector register
+xvl  t1, fp64, t0                                            # Load the vector length in bytes when holding fp64 elements to t1
 
 loop:
-    beqz a0, end                            # If n == 0, exit the loop
+    beqz a0, end                                             # If n == 0, exit the loop
 
-    xvsetvli t0, a0, LMUL=1/8               # Set the vector length for the remaining elements
+    xvsetvli t0, a0, LMUL=1/8                                # Set the vector length for the remaining elements
 
-    xvl.v v0, fp64, (a1), LMUL=1/8          # Load vector register v0 with vl double-precision elements from vector x
-    xvl.v v1, fp64, (a2), LMUL=1/8          # Load vector register v1 with vl double-precision elements from vector y
+    xvl.v v0<fp64>, (a1), LMUL=1/8                           # Load vector register v0 with vl double-precision elements from vector x
+    xvl.v v1<fp64>, (a2), LMUL=1/8                           # Load vector register v1 with vl double-precision elements from vector y
 
-    xvfmacc.vf v1, fa0, v0, LMUL=1/8        # v1 = fa0 * v0 + v1
+    xvfmacc.vf v1<fp64>, fa0<fp64>, v0<fp64>, LMUL=1/8       # v1 = fa0 * v0 + v1
 
-    xvs.v v1, fp64, (a2), LMUL=1/8          # Store result back to y
+    xvs.v v1<fp64>, (a2), LMUL=1/8                           # Store result back to y
 
     # Update pointers and counter
-    add a1, a1, t1               # Move x pointer
-    add a2, a2, t1               # Move y pointer
-    sub a0, a0, t0               # Decrement element count by the vector length
+    add a1, a1, t1                                           # Move x pointer
+    add a2, a2, t1                                           # Move y pointer
+    sub a0, a0, t0                                           # Decrement element count by the vector length
 
-    j loop                       # Repeat the loop
+    j loop                                                   # Repeat the loop
 
 end:
     # Exit point
     ret
 ~~~
+
+And we can take advantage of the extended vector registers to compute the same result with far fewer instructions:
+~~~
+# Let a0 = n (number of elements)
+# Let fa0 = alpha (scalar multiplier)
+# Let a1 = address of x vector
+# Let a2 = address of y vector
+
+# Register setup
+xvsetvli t0, zero, LMUL=8                                    # Set the vector length to the number of bytes in 8 vector registers
+xvl  t1, fp64, t0                                            # Load the vector length in bytes when holding fp64 elements to t1
+
+loop:
+    beqz a0, end                                             # If n == 0, exit the loop
+
+    xvsetvli t0, a0, LMUL=8                                  # Set the vector length for the remaining elements
+
+    xvl.v v0<fp64>, (a1), LMUL=8                             # Load vector registers v0:v63 with vl double-precision elements from vector x
+    xvl.v v64<fp64>, (a2), LMUL=8                            # Load vector registers v64:v127 with vl double-precision elements from vector y
+
+    xvfmacc.vf v64<fp64>, fa0<fp64>, v0<fp64>, LMUL=8        # v1 = fa0 * v0 + v1
+
+    xvs.v v64<fp64>, (a2), LMUL=8                            # Store result back to y
+
+    # Update pointers and counter
+    add a1, a1, t1                                           # Move x pointer
+    add a2, a2, t1                                           # Move y pointer
+    sub a0, a0, t0                                           # Decrement element count by the vector length
+
+    j loop                                                   # Repeat the loop
+
+end:
+    # Exit point
+    ret
+~~~
+
