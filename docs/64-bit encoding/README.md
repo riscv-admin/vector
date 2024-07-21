@@ -147,7 +147,7 @@ loop:
     xvl.v v0<fp64>, (a1), LMUL=8                             # Load vector registers v0:v63 with vl double-precision elements from vector x
     xvl.v v64<fp64>, (a2), LMUL=8                            # Load vector registers v64:v127 with vl double-precision elements from vector y
 
-    xvfmacc.vf v64<fp64>, fa0<fp64>, v0<fp64>, LMUL=8        # v1 = fa0 * v0 + v1
+    xvfmacc.vf v64<fp64>, fa0<fp64>, v0<fp64>, LMUL=8        # v64 = fa0 * v0 + v64
 
     xvs.v v64<fp64>, (a2), LMUL=8                            # Store result back to y
 
@@ -171,3 +171,41 @@ The scalar $\alpha$ is of type single-precision (${\sf fp32}$), vector $x$ is of
 A simplified signature is
 
 <code> void BLAS_axpy(int n, fp32 alpha, fp16 *x, fp64 *y); </code>
+
+In this case, number of elements per vector register for $x$ is four times the number of elements per vector register for $y$.
+To operate the same number of elements, we need four times as many $y$ registers as $x$ registers.
+The code could look as follows:
+~~~
+# Let a0 = n (number of elements)
+# Let fa0 = alpha (scalar multiplier)
+# Let a1 = address of x vector
+# Let a2 = address of y vector
+
+# Register setup
+xvsetvli t0, zero, LMUL=8                                    # Set the vector length to the number of bytes in 8 vector registers
+xvl  t1, fp16, t0                                            # Load the vector length in bytes when holding fp16 elements to t1
+xvl  t2, fp64, t0                                            # Load the vector length in bytes when holding fp64 elements to t2
+
+loop:
+    beqz a0, end                                             # If n == 0, exit the loop
+
+    xvsetvli t0, a0, LMUL=8                                  # Set the vector length for the remaining elements
+
+    xvl.v v0 <fp16>, (a1), LMUL=8                            # Load vector registers v0:v15 with vl half-precision elements from vector x
+    xvl.v v64<fp64>, (a2), LMUL=8                            # Load vector registers v64:v127 with vl double-precision elements from vector y
+
+    xvfmacc.vf v64<fp64>, fa0<fp32>, v0<fp16>, LMUL=8        # v64 = fa0 * v0 + v64
+
+    xvs.v v64<fp64>, (a2), LMUL=8                            # Store result back to y
+
+    # Update pointers and counter
+    add a1, a1, t1                                           # Move x pointer
+    add a2, a2, t2                                           # Move y pointer
+    sub a0, a0, t0                                           # Decrement element count by the vector length
+
+    j loop                                                   # Repeat the loop
+
+end:
+    # Exit point
+    ret
+~~~
