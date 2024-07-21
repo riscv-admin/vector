@@ -3,6 +3,7 @@
 #### 32-bit vv-encoding for vector arithmetic instructions
 
 | major (7 bits) | vd (5 bits) | variant (3 bits) | vs1 (5 bits) | vs2 (5 bits) | vm (1 bit) | function (6 bits) |
+| (7 bits)       |             | (3 bits)         |              |              |            |                   |
 |----------------|-------------|------------------|--------------|--------------|------------|-------------------|          
 | 0x57           |  0-31       | 0-7              | 0-31         | 0-31         | 0-1        | 0-63              |
 
