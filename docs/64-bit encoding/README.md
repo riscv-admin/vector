@@ -8,6 +8,6 @@
 
 #### 64-bit vv-encoding for vector arithmetic instructions (size of field in bits)
 
-| major <br> (7) | vd <br> (s) | variant <br> (3) | vs1 <br> (8) | vs2 <br> (8) | vm <br> (3) | polarity <br> (1) | vd size <br> (2) | vs1 size <br> (2) | vs2 size <br> (2) | LMUL <br> (3) | vtma <br> (2) | vrnd <br> (2) |function <br> (6) | suffix <br> (7) | 
+| major <br> (7) | "  vd   " <br> (8) | variant <br> (3) | vs1 <br> (8) | vs2 <br> (8) | vm <br> (3) | polarity <br> (1) | vd size <br> (2) | vs1 size <br> (2) | vs2 size <br> (2) | LMUL <br> (3) | vtma <br> (2) | vrnd <br> (2) |function <br> (6) | suffix <br> (7) | 
 |----------------|-------------|------------------|--------------|--------------|-------------|-------------------|------------------|-------------------|-------------------|---------------|---------------|---------------|------------------|-----------------|          
 | 0x57           |  0-255      | 0-7              | 0-255        | 0-255        | 0-7         | 0-1               | 0-3              | 0-3               | 0-3               | 0-7           | 0-3           | 0-3           | bbbnnn           | 1111111         |
