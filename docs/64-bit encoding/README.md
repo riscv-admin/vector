@@ -49,4 +49,4 @@ The scalar $\alpha$ and vectors $x$ and $y$ are of type double-precision (${\sf 
 A simplified signature is
 <code>
 void daxpy(int n, double alpha, double *x, double *y);
-<\code>
+</code>
