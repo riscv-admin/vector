@@ -55,9 +55,7 @@ The BLAS `daxpy` routines computes $y \leftarrow \alpha x + y$.
 The scalar $\alpha$ and vectors $x$ and $y$ are of type double-precision (${\sf fp64}$).
 A simplified signature is
 
-<code>
-void daxpy(int n, double alpha, double *x, double *y);
-</code>
+<code> void daxpy(int n, double alpha, double *x, double *y); </code>
 
 Using existing RISC-V vector instructions, the routine can be coded as follows:
 
