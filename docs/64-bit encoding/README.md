@@ -23,13 +23,21 @@ The `type` fields in the instruction are used to encode the `sizeof` the element
 
 The additional 32 bits of space in a 64-bit encoding are consumed as follows:
 
-| bits       | usage |
-|------------|-------|
-| 7 bits     | mandatory suffix |
+| bits       | usage                                                                                                           |
+|------------|-----------------------------------------------------------------------------------------------------------------|
+| 7 bits     | mandatory suffix                                                                                                |
 | 9 bits     | 3 additional bits for each source and destination vector register, to support 256-register vector register file |
-| 6 bits     | 2 additional bits for the elemental type of each source and destination vector register |
-| 2 bits     | explicit mask identifier (3 bits instead of 1) |
-| 1 bit      | mask polarity flag |
-| 3 bits     | explicit group multiplier (LMUL) |
-| 2 bits     | explicit tail and mask agnostic flags |
-| 2 bits     | explicit rounding mode |
+| 6 bits     | 2 additional bits for the elemental type of each source and destination vector register                         |
+| 2 bits     | explicit mask identifier (3 bits instead of 1)                                                                  |
+| 1 bit      | mask polarity flag                                                                                              |
+| 3 bits     | explicit group multiplier (LMUL)                                                                                |
+| 2 bits     | explicit tail and mask agnostic flags                                                                           |
+| 2 bits     | explicit rounding mode                                                                                          |
+
+### Do we really need 256 architected vector registers?
+
+It is unlikely the first extension will have 256 architected vector registers, but we need to future proof the architecture.
+If we think of SIMT models of execution, with mixed data types, 256 registers is not an unreasonable number.
+If a vector register can store $n$ elements of size 1 byte, we would need 8 registers to hold the same $n$ elements of size 8 bytes.
+The current architecture defines 32 general purpose scalar registers and 32 vector registers.
+Therefore, $256 = 8 \times 32$ is not an unreasonable number.
