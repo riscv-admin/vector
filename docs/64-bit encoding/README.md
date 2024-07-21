@@ -21,6 +21,8 @@ The `type` fields in the instruction are used to encode the `sizeof` the element
 | 2            | 4 bytes       |
 | 3            | 8 bytes       |
 
+The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${\sf EMUL}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf LMUL}$) for that register.
+
 The additional 32 bits of space in a 64-bit encoding are consumed as follows:
 
 | bits       | usage                                                                                                           |
@@ -47,6 +49,43 @@ Therefore, $256 = 8 \times 32$ is not an unreasonable number.
 The BLAS `daxpy` routines computes $y \leftarrow \alpha x + y$. 
 The scalar $\alpha$ and vectors $x$ and $y$ are of type double-precision (${\sf fp64}$).
 A simplified signature is
+
 <code>
 void daxpy(int n, double alpha, double *x, double *y);
+</code>
+
+Using existing RISC-V vector instructions, the routine can be coded as follows:
+
+<code>
+# Let a0 = n (number of elements)
+# Let fa0 = alpha (scalar multiplier)
+# Let a1 = address of x vector
+# Let a2 = address of y vector
+
+# Register setup
+vsetvli t0, zero, e64, m1        # Set the vector length for 64-bit elements
+vl  t1, vlenb(t0)                # Load the vector length in bytes to t1
+
+loop:
+    beqz a0, end                 # If n == 0, exit the loop
+
+    vsetvli t0, a0, e64, m1      # Set the vector length for the remaining elements
+
+    vle64.v v1, (a1)             # Load vector x
+    vle64.v v2, (a2)             # Load vector y
+
+    vfmacc.vf v2, fa0, v1        # v2 = fa0 * v1 + v2
+
+    vse64.v v2, (a2)             # Store result back to y
+
+    # Update pointers and counter
+    add a1, a1, t1               # Move x pointer
+    add a2, a2, t1               # Move y pointer
+    sub a0, a0, t0               # Decrement element count by the vector length
+
+    j loop                       # Repeat the loop
+
+end:
+    # Exit point
+    ret
 </code>
