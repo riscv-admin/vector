@@ -8,7 +8,7 @@
 
 ### 64-bit vv-encoding for vector arithmetic instructions (size of field in bits)
 
-| major <br> (7) | vd <br> (8) | variant <br> (3) | vs1 <br> (8) | vs2 <br> (8) | vm <br> (3) | polarity <br> (1) | vd type <br> (2) | vs1 type <br> (2) | vs2 type <br> (2) | LMUL <br> (3) | vtma <br> (2) | vrnd <br> (2) |function <br> (6)                 | suffix <br> (7) | 
+| major <br> (7) | vd <br> (8) | variant <br> (3) | vs1 <br> (8) | vs2 <br> (8) | vm <br> (3) | polarity <br> (1) | vd type <br> (2) | vs1 type <br> (2) | vs2 type <br> (2) | GMUL <br> (3) | vtma <br> (2) | vrnd <br> (2) |function <br> (6)                 | suffix <br> (7) | 
 |----------------|-------------|------------------|--------------|--------------|-------------|-------------------|------------------|-------------------|-------------------|---------------|---------------|---------------|----------------------------------|-----------------|          
 | 0x57           |  $0:255$    | $0:7$            | $0:255$      | $0:255$      | $0:7$       | $0:1$             | $0:3$            | $0:3$             | $0:3$             | $0:7$         | $0:3$         | $0:3$         | bbbnnn <br> ${\sf nnn} \neq 111$ | 1111111         |
 
@@ -23,7 +23,7 @@ The additional 32 bits of space in a 64-bit encoding are consumed as follows:
 | 6 bits     | 2 additional bits for the elemental type of each source and destination vector register                         |
 | 2 bits     | explicit mask identifier (3 bits instead of 1)                                                                  |
 | 1 bit      | mask polarity flag                                                                                              |
-| 3 bits     | explicit group multiplier (LMUL)                                                                                |
+| 3 bits     | explicit group multiplier (GMUL)                                                                                |
 | 2 bits     | explicit tail and mask agnostic flags                                                                           |
 | 2 bits     | explicit rounding mode                                                                                          |
 
@@ -38,7 +38,7 @@ The `type` fields in the instruction are used to encode the `sizeof` the element
 | 2            | 4 bytes       |
 | 3            | 8 bytes       |
 
-The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${\sf EMUL}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf LMUL}$) for that register.
+The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${\sf EMUL}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf GMUL}$) for that register.
 This ensures that, in mixed-type instructions, all registers have the same number of elements.
 
 ### Do we really need 256 architected vector registers?
@@ -101,20 +101,20 @@ The exact same dynamic behavior (isomorphic instruction trace) can be achieved u
 # Let a2 = address of y vector
 
 # Register setup
-xvsetvli t0, zero, LMUL=1/8                                  # Set the vector length to the number of bytes in 1/8th of a vector register
+xvsetvli t0, zero, GMUL=1/8                                  # Set the vector length to the number of bytes in 1/8th of a vector register
 xvl  t1, fp64, t0                                            # Load the vector length in bytes when holding fp64 elements to t1
 
 loop:
     beqz a0, end                                             # If n == 0, exit the loop
 
-    xvsetvli t0, a0, LMUL=1/8                                # Set the vector length for the remaining elements
+    xvsetvli t0, a0, GMUL=1/8                                # Set the vector length for the remaining elements
 
-    xvl.v v0<fp64>, (a1), LMUL=1/8                           # Load vector register v0 with vl double-precision elements from vector x
-    xvl.v v1<fp64>, (a2), LMUL=1/8                           # Load vector register v1 with vl double-precision elements from vector y
+    xvl.v v0<fp64>, (a1), GMUL=1/8                           # Load vector register v0 with vl double-precision elements from vector x
+    xvl.v v1<fp64>, (a2), GMUL=1/8                           # Load vector register v1 with vl double-precision elements from vector y
 
-    xvfmacc.vf v1<fp64>, fa0<fp64>, v0<fp64>, LMUL=1/8       # v1 = fa0 * v0 + v1
+    xvfmacc.vf v1<fp64>, fa0<fp64>, v0<fp64>, GMUL=1/8       # v1 = fa0 * v0 + v1
 
-    xvs.v v1<fp64>, (a2), LMUL=1/8                           # Store result back to y
+    xvs.v v1<fp64>, (a2), GMUL=1/8                           # Store result back to y
 
     # Update pointers and counter
     add a1, a1, t1                                           # Move x pointer
@@ -136,20 +136,20 @@ And we can take advantage of the extended vector registers to compute the same r
 # Let a2 = address of y vector
 
 # Register setup
-xvsetvli t0, zero, LMUL=8                                    # Set the vector length to the number of bytes in 8 vector registers
+xvsetvli t0, zero, GMUL=8                                    # Set the vector length to the number of bytes in 8 vector registers
 xvl  t1, fp64, t0                                            # Load the vector length in bytes when holding fp64 elements to t1
 
 loop:
     beqz a0, end                                             # If n == 0, exit the loop
 
-    xvsetvli t0, a0, LMUL=8                                  # Set the vector length for the remaining elements
+    xvsetvli t0, a0, GMUL=8                                  # Set the vector length for the remaining elements
 
-    xvl.v v0<fp64>, (a1), LMUL=8                             # Load vector registers v0:v63 with vl double-precision elements from vector x
-    xvl.v v64<fp64>, (a2), LMUL=8                            # Load vector registers v64:v127 with vl double-precision elements from vector y
+    xvl.v v0<fp64>, (a1), GMUL=8                             # Load vector registers v0:v63 with vl double-precision elements from vector x
+    xvl.v v64<fp64>, (a2), GMUL=8                            # Load vector registers v64:v127 with vl double-precision elements from vector y
 
-    xvfmacc.vf v64<fp64>, fa0<fp64>, v0<fp64>, LMUL=8        # v64 = fa0 * v0 + v64
+    xvfmacc.vf v64<fp64>, fa0<fp64>, v0<fp64>, GMUL=8        # v64 = fa0 * v0 + v64
 
-    xvs.v v64<fp64>, (a2), LMUL=8                            # Store result back to y
+    xvs.v v64<fp64>, (a2), GMUL=8                            # Store result back to y
 
     # Update pointers and counter
     add a1, a1, t1                                           # Move x pointer
@@ -182,21 +182,21 @@ The code could look as follows:
 # Let a2 = address of y vector
 
 # Register setup
-xvsetvli t0, zero, LMUL=8                                    # Set the vector length to the number of bytes in 8 vector registers
+xvsetvli t0, zero, GMUL=8                                    # Set the vector length to the number of bytes in 8 vector registers
 xvl  t1, fp16, t0                                            # Load the vector length in bytes when holding fp16 elements to t1
 xvl  t2, fp64, t0                                            # Load the vector length in bytes when holding fp64 elements to t2
 
 loop:
     beqz a0, end                                             # If n == 0, exit the loop
 
-    xvsetvli t0, a0, LMUL=8                                  # Set the vector length for the remaining elements
+    xvsetvli t0, a0, GMUL=8                                  # Set the vector length for the remaining elements
 
-    xvl.v v0 <fp16>, (a1), LMUL=8                            # Load vector registers v0:v15 with vl half-precision elements from vector x
-    xvl.v v64<fp64>, (a2), LMUL=8                            # Load vector registers v64:v127 with vl double-precision elements from vector y
+    xvl.v v0 <fp16>, (a1), GMUL=8                            # Load vector registers v0:v15 with vl half-precision elements from vector x
+    xvl.v v64<fp64>, (a2), GMUL=8                            # Load vector registers v64:v127 with vl double-precision elements from vector y
 
-    xvfmacc.vf v64<fp64>, fa0<fp32>, v0<fp16>, LMUL=8        # v64 = fa0 * v0 + v64
+    xvfmacc.vf v64<fp64>, fa0<fp32>, v0<fp16>, GMUL=8        # v64 = fa0 * v0 + v64
 
-    xvs.v v64<fp64>, (a2), LMUL=8                            # Store result back to y
+    xvs.v v64<fp64>, (a2), GMUL=8                            # Store result back to y
 
     # Update pointers and counter
     add a1, a1, t1                                           # Move x pointer
