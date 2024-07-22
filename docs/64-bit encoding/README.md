@@ -128,6 +128,8 @@ end:
     ret
 ~~~
 
+![image1](fp64fp64x4.png)
+
 And we can take advantage of the extended vector registers to compute the same result with far fewer instructions:
 ~~~
 # Let a0 = n (number of elements)
