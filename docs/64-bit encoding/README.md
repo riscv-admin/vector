@@ -170,7 +170,7 @@ end:
 ### A more elaborate example: Mixed-type axpy
 
 In this example, based on the proposed second generation BLAS, we want to compute $y \leftarrow \alpha x + y$. 
-The scalar $\alpha$ is of type single-precision (${\sf fp32}$), vector $x$ is of type half-precision (${\sf fp32}$), and vector $y$ is of type double-precision (${\sf fp64}$).
+The scalar $\alpha$ is of type single-precision (${\sf fp32}$), vector $x$ is of type half-precision (${\sf fp16}$), and vector $y$ is of type double-precision (${\sf fp64}$).
 
 A simplified signature is
 
