@@ -165,6 +165,8 @@ end:
     ret
 ~~~
 
+![image2](fp64fp64x256.png)
+
 ### A more elaborate example: Mixed-type axpy
 
 In this example, based on the proposed second generation BLAS, we want to compute $y \leftarrow \alpha x + y$. 
@@ -211,3 +213,5 @@ end:
     # Exit point
     ret
 ~~~
+
+![image3](fp16fp64x256.png)
