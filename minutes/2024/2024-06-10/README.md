@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2024-JUN-24
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://zoom.us/rec/share/cXTxjcsp-WDmCSgiH9nfPD-BaHGhcEv1veVFMfXTu8Pf9NOeEVMSfhe_3-yJAPpe.NKxL96Vo8demBfF1?startTime=1718031702000)
 - Take 2 on emulating SIMT (GPU) behavior using vector architectures [PDF](SIMT_emulation.pdf).
 - Backup topic: Continue discussion on subsetting of the existing RISC-V V extensions to specs that can be implemented by different classes of RISC-V processors.
 
