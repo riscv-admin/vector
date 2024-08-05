@@ -23,13 +23,12 @@ The additional 32 bits of space in a 64-bit encoding are consumed as follows:
 | 9 bits     | 3 additional bits for the elemental type of each source and destination vector register                         |
 | 2 bits     | explicit mask identifier (3 bits instead of 1)                                                                  |
 | 1 bit      | mask polarity flag                                                                                              |
-| 3 bits     | explicit group multiplier (GMUL)                                                                                |
 | 2 bits     | explicit tail and mask agnostic flags                                                                           |
 | 2 bits     | explicit rounding mode                                                                                          |
 
 ### Type information
 
-The `type` fields in the instruction are used to encode the `sizeof` the elemental types for the destination (`vd`) and source (`vs1`, `vs2`) vector registers, according to the following table:
+The `type` fields in the instruction are used to encode (1) the `sizeof` the elemental types for the destination (`vd`) and source (`vs1`, `vs2`) vector registers, and (2) additional variant information for integer and floating-point types, according to the following table (the integer vs floating-point nature of the operand must be encoded in the `function` field of the instruction):
 
 | `type` ($T$) | `sizeof`($T$) | integer   | floating-point |
 |--------------|---------------|-----------|----------------|
@@ -42,7 +41,7 @@ The `type` fields in the instruction are used to encode the `sizeof` the element
 | 6            | 8 bytes       | unsigned  | fp32 complex   |
 | 7            | 16 bytes      | unsigned  | fp64 complex   |
 
-The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${\sf EMUL}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf GMUL}$) for that register.
+The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${\sf EMUL}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf LMUL}$) for that register.
 This ensures that, in mixed-type instructions, all registers have the same number of elements.
 
 ### Do we really need 256 architected vector registers?
