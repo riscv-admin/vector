@@ -38,8 +38,8 @@ The `type` fields in the instruction are used to encode (1) the `sizeof` the ele
 | 3            | 8 bytes       | signed    | IEEE fp64      |
 | 4            | 1 byte        | unsigned  | fp8 4:3        |
 | 5            | 2 bytes       | unsigned  | bfloat16       |
-| 6            | 8 bytes       | unsigned  | fp32 complex   |
-| 7            | 16 bytes      | unsigned  | fp64 complex   |
+| 6            | 4 bytes       | unsigned  | fp32 complex   |
+| 7            | 8 bytes      | unsigned  | fp64 complex   |
 
 The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${\sf EMUL}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf LMUL}$) for that register.
 This ensures that, in mixed-type instructions, all register groups (one group for vs1, one group for vs2, one group for vd) have the same number of elements.
