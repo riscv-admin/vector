@@ -1,4 +1,4 @@
-# A strawman for 64-bit vector encoding
+# A strawman for 64-bit vector encoding - take 2
 
 ### 32-bit vv-encoding for vector arithmetic instructions (size of field in bits)
 
@@ -20,7 +20,7 @@ The additional 32 bits of space in a 64-bit encoding are consumed as follows:
 |------------|-----------------------------------------------------------------------------------------------------------------|
 | 7 bits     | mandatory suffix                                                                                                |
 | 9 bits     | 3 additional bits for each source and destination vector register, to support 256-register vector register file |
-| 6 bits     | 2 additional bits for the elemental type of each source and destination vector register                         |
+| 9 bits     | 3 additional bits for the elemental type of each source and destination vector register                         |
 | 2 bits     | explicit mask identifier (3 bits instead of 1)                                                                  |
 | 1 bit      | mask polarity flag                                                                                              |
 | 3 bits     | explicit group multiplier (GMUL)                                                                                |
@@ -31,12 +31,16 @@ The additional 32 bits of space in a 64-bit encoding are consumed as follows:
 
 The `type` fields in the instruction are used to encode the `sizeof` the elemental types for the destination (`vd`) and source (`vs1`, `vs2`) vector registers, according to the following table:
 
-| `type` ($T$) | `sizeof`($T$) |
-|--------------|---------------|
-| 0            | 1 byte        |
-| 1            | 2 bytes       |
-| 2            | 4 bytes       |
-| 3            | 8 bytes       |
+| `type` ($T$) | `sizeof`($T$) | integer   | floating-point |
+|--------------|---------------|-----------|----------------|
+| 0            | 1 byte        | signed    | fp8 5:2        |
+| 1            | 2 bytes       | signed    | IEEE fp16      |
+| 2            | 4 bytes       | signed    | IEEE fp32      |
+| 3            | 8 bytes       | signed    | IEEE fp64      |
+| 4            | 1 byte        | unsigned  | fp8 4:3        |
+| 5            | 2 bytes       | unsigned  | bfloat16       |
+| 6            | 8 bytes       | unsigned  | fp32 complex   |
+| 7            | 16 bytes      | unsigned  | fp64 complex   |
 
 The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${\sf EMUL}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf GMUL}$) for that register.
 This ensures that, in mixed-type instructions, all registers have the same number of elements.
