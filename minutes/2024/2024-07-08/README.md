@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2024-JUL-22
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://zoom.us/rec/share/FnZloU-hG-KW7zDiJZqoUiUSCVoQgu9drLGmgTNbcv5QtQb5UPN_yEYIBnau9PxN.xjMxtr1Gkk6he6l7?startTime=1720451183000)
 - Abel will lead discussion of the **Zvinserti** instructions.
 
 ### Subsetting of existing RISC-V V extensions
