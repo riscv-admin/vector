@@ -42,7 +42,7 @@ The `type` fields in the instruction are used to encode (1) the `sizeof` the ele
 | 7            | 16 bytes      | unsigned  | fp64 complex   |
 
 The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${\sf EMUL}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf LMUL}$) for that register.
-This ensures that, in mixed-type instructions, all registers have the same number of elements.
+This ensures that, in mixed-type instructions, all register groups (one group for vs1, one group for vs2, one group for vd) have the same number of elements.
 
 ### Do we really need 256 architected vector registers?
 
