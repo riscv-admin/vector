@@ -21,6 +21,6 @@ Attendance (# people):
 - Next meeting: 2024-AUG-05
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://zoom.us/rec/share/pBW5LarK8cI4weWIfN4y1dXLfoB5kQy8MePhnkBfN_7c8aRHcicl6j8dDDXYqpCa.EsuE7XjnxK0a-a6D?startTime=1721660550000)
 - Abel will continue any discussion of the **Zvinserti** instructions.
 - Jose has an update on the [64-bit encoding](https://github.com/riscv-admin/vector/blob/main/docs/64-bit%20encoding/README.md).
