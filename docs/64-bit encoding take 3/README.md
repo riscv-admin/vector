@@ -145,16 +145,16 @@ and it is advantageous to both the program and the micro-architecture to have th
 The `type` fields in the instruction are used to encode (1) the `sizeof` the elemental types for the destination (`vd`) and source (`vs1`, `vs2`) vector registers, 
 and (2) additional variant information for floating-point (`vd` and `vs1`) or integer (`vs2`) types, according to the following table:
 
-| `type` ($T$) | `vd`/`vs1` <br> `sizeof`($T$) | floating-point variant |
-|--------------|---------------|------------------------|
-| 0            | 1 byte        | fp8 5:2                |
-| 1            | 2 bytes       | IEEE fp16              |
-| 2            | 4 bytes       | IEEE fp32              |
-| 3            | 8 bytes       | IEEE fp64              |
-| 4            | 1 byte        | fp8 4:3                |
-| 5            | 2 bytes       | bfloat16               |
-| 6            | 8 bytes       | fp32 complex           |
-| 7            | 16 bytes      | fp64 complex           |
+| `type` ($T$) | `vd`/`vs1` <br> `sizeof`($T$) | `vd`/`vs1` <br> floating-point variant | `vs2` <br> `sizeof`($T$) | `vs2` <br> integer variant |
+|--------------|-------------------------------|----------------------------------------|--------------------------|----------------------------|
+| 0            | 1 byte                        | fp8 5:2                                | 1 byte                   | signed 8-bit integer       |
+| 1            | 2 bytes                       | IEEE fp16                              | 2 bytes                  | signed 16-bit integer      |
+| 2            | 4 bytes                       | IEEE fp32                              | 4 bytes                  | signed 32-bit integer      |
+| 3            | 8 bytes                       | IEEE fp64                              | 8 bytes                  | signed 64-bit integer      |
+| 4            | 1 byte                        | fp8 4:3                                | 1 byte                   | unsigned 8-bit integer     |
+| 5            | 2 bytes                       | bfloat16                               | 2 bytes                  | unsigned 16-bit integer    |
+| 6            | 8 bytes                       | fp32 complex                           | 4 bytes                  | unsigned 32-bit integer    |
+| 7            | 16 bytes                      | fp64 complex                           | 8 bytes                  | unsigned 64-bit integer    |
 
 The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${\sf EMUL}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf LMUL}$) for that register.
 This ensures that, in mixed-type instructions, all register groups (one group for vs1, one group for vs2, one group for vd) have the same number of elements.
