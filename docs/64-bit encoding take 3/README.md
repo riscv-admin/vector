@@ -4,7 +4,7 @@ We want to accomplish the following goals with the 64-bit encoding:
 1. Expand the architected vector register space to 256 vector registers.
 2. Support multiple vector mask registers. The space of vector mask registers is a subset of the space of vector registers.
 3. Explicitly identify the types of each source and destination vector register, as a means to support general mixed-type instructions.
-4. Explicitly identify mask agnoticism and rounding-modes in each instruction.
+4. Explicitly identify mask agnostic and rounding-modes in each instruction.
 
 ### Do we really need 256 architected vector registers?
 
@@ -41,12 +41,12 @@ The additional 32 bits of space in a 64-bit encoding are consumed as follows:
 | 9 bits     | 3 additional bits for the elemental type of each source and destination vector register                         |
 | 2 bits     | explicit mask identifier (3 bits instead of 1 -- 000 reserved for no masking)                                   |
 | 1 bit      | mask polarity flag                                                                                              |
-| 1 bits     | explicit mask agnostic flags                                                                                    |
+| 1 bits     | explicit mask agnostic flag                                                                                     |
 | 3 bits     | explicit floating-point rounding mode                                                                           |
 
 The vector length multiplier (LMUL) and vector tail agnostic flag (vta) are not specified in every instruction and must be specified in the vtype CSR.
 The expectation is that these parameters reflect a choice of the programming model and will not change during execution of a long body of code (e.g., an entire source code function).
-The remaining parameters (elemental data types, mask register, mask polarity, mask agnoticism, and floating-point rounding mode) are more local decisions 
+The remaining parameters (elemental data types, mask register, mask polarity, mask agnostic, and floating-point rounding mode) are more local decisions 
 and it is advantageous to both the program and the micro-architecture to have them explicitly identified in every instruction.
 
 #### Type information
