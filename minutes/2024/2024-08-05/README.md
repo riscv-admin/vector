@@ -23,4 +23,4 @@ Attendance (# people):
 ## Agenda
 - [Zoom recording](https://zoom.us/rec/share/IXuivfGMe05VkEVWxtiKNGC1VOD_P-TKdhDYnqLhD9lurayfn1cP4ZB1ctI5je4.6XDfDc_ffqsjxCb7?startTime=1722870146000)
 - Abel will continue any discussion of the **Zvinserti** instructions.
-- Jose has an update on the [64-bit encoding](https://github.com/riscv-admin/vector/blob/main/docs/64-bit%20encoding/README.md).
+- Jose has an update on the [64-bit encoding](https://github.com/riscv-admin/vector/tree/main/docs/64-bit%20encoding%20take%202).
