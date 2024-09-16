@@ -21,6 +21,6 @@ Attendance (# people):
 - Next meeting: 2024-SEP-16 (No meeting on September 2nd - Labor Day in US/Canada)
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://zoom.us/rec/share/853zeipJu1kkOWhC_Wa-Km-vA9MaH295U64dUozwcDHzxOXK35PiE2IuWrpE3vJt.qifi4GpxRpTLMst7?startTime=1724079744000)
 - Abel will continue any discussion of the **Zvinserti** instructions.
 - Jose has an update on the [64-bit encoding](https://github.com/riscv-admin/vector/blob/main/docs/64-bit%20encoding%20take%203/README.md).
