@@ -1,4 +1,4 @@
-# A strawman for 64-bit vector encoding - take 3
+# A strawman for 64-bit vector encoding - take 4
 
 We want to accomplish the following goals with the 64-bit encoding:
 1. Expand the architected vector register space to 256 vector registers.
