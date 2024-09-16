@@ -67,7 +67,7 @@ and (2) additional variant information for floating-point types, according to th
 | 6            | -             | -                      |
 | 7            | -             | -                      |
 
-The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (${`EMUL`}({\sf v}) = {\sf sizeof}({\sf v}) \times {\sf LMUL}$) for that register.
+The `sizeof` for an element type of a vector register is used to compute the effective group multiplier (`EMUL`$(v) = $ `sizeof`$(v) \times$ `LMUL`) for that register.
 This ensures that, in mixed-type instructions, all register groups (one group for vs1, one group for vs2, one group for vd) have the same number of elements.
 
 #### Examples
