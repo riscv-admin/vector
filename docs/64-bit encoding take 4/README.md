@@ -72,7 +72,7 @@ This ensures that, in mixed-type instructions, all register groups (one group fo
 
 #### Examples (`LMUL = 1`, `VLENB` = 16)
 
-`vfmacc.vv`<c64,f32,c32,up> v0, v16, v20, m32/1/z
+`xvfmacc.vv`<c64,f32,c32,up> v0, v16, v20, m32/1/z
 
 This instruction operates on vectors of 16 elements (`LMUL = 1`, `VLENB` = 16). The first source vector (`vs1`) consists of 16 elements of type IEEE fp32, stored in the group (v16-v19). 
 The second source vector (`vs2`) consists of 16 elements of type single-precision complex, stored in the group (v20-v27).
@@ -82,4 +82,3 @@ All arithmetic is performed in IEEE Round Up mode.
 Furthermore, this instruction is executed under control of the mask in vector register 32, with positive polarity.
 Only those elements of the destination vector that have a corresponding mask set to 1 in the mask register will receive the new computed value.
 Other elements of the destination vector will be set to a fixed value.
-
