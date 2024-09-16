@@ -75,7 +75,7 @@ This ensures that, in mixed-type instructions, all register groups (one group fo
 `vfmacc.vv`<c64,f32,c32,up> v0, v16, v20, m32/1/z
 
 This instruction operates on vectors of 16 elements (`LMUL = 1`, `VLENB` = 16). The first source vector (`vs1`) consists of 16 elements of type IEEE fp32, stored in the group (v16-v19). 
-The second soruce vector (`vs2`) consists of 16 elements of type single-precision complex, stored in the group (v20-v27).
+The second source vector (`vs2`) consists of 16 elements of type single-precision complex, stored in the group (v20-v27).
 The instruction computes the element-wise multiplication of `vs1` and `vs2`. 
 This intermediate vector is then element-wise accumulated with the destination vector (`vd`), which consists of 16 elements of type double-precision complex stored in the group (v0-v15).
 All arithmetic is performed in IEEE Round Up mode.
