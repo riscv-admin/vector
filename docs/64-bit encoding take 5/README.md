@@ -96,7 +96,6 @@ Other elements of the destination vector will be set to a fixed value.
 | `xvccsub.vv`   | complex | complex | complex | vd[i] = vs1[i] - vs2[i]            |
 | `xvrcsub.vv`   | real    | complex | complex | vd[i] = vs1[i] - vs2[i]            |
 | `xvcrsub.vv`   | complex | real    | complex | vd[i] = vs1[i] - vs2[i]            |
-|----------------|---------|---------|---------|------------------------------------|
 | `xvrrmul.vv`   | real    | real    | real    | vd[i] = vs1[i] * vs2[i]            |
 | `xvccmul.vv`   | complex | complex | complex | vd[i] = vs1[i] * vs2[i]            |
 | `xvrcmul.vv`   | real    | complex | complex | vd[i] = vs1[i] * vs2[i]            |
@@ -104,6 +103,7 @@ Other elements of the destination vector will be set to a fixed value.
 | `xvccdiv.vv`   | complex | complex | complex | vd[i] = vs1[i] / vs2[i]            |
 | `xvrcdiv.vv`   | real    | complex | complex | vd[i] = vs1[i] / vs2[i]            |
 | `xvcrdiv.vv`   | complex | real    | complex | vd[i] = vs1[i] / vs2[i]            |
+|----------------|---------|---------|---------|------------------------------------|
 | `xvrrmacc.vv`  | real    | real    | real    | vd[i] = +(vs1[i] * vs2[i]) + vd[i] |
 | `xvccmacc.vv`  | complex | complex | complex | vd[i] = +(vs1[i] * vs2[i]) + vd[i] |
 | `xvrcmacc.vv`  | real    | complex | complex | vd[i] = +(vs1[i] * vs2[i]) + vd[i] |
@@ -128,11 +128,14 @@ Other elements of the destination vector will be set to a fixed value.
 | `xvrrnmsub.vv` | real    | real    | real    | vd[i] = -(vs1[i] * vd[i]) + vs2[i] |
 | `xvccnmsub.vv` | complex | complex | complex | vd[i] = -(vs1[i] * vd[i]) + vs2[i] |
 | `xvrcnmsub.vv` | real    | complex | complex | vd[i] = -(vs1[i] * vd[i]) + vs2[i] |
+|----------------|---------|---------|---------|------------------------------------|
 | `xvrrmin.vv`   | real    | real    | real    | vd[i] = min(vs1[i],vs2[i])         |
 | `xvrrmax.vv`   | real    | real    | real    | vd[i] = max(vs1[i],vs2[i])         |
+|----------------|---------|---------|---------|------------------------------------|
 | `xvrrsgnj.vv`  | real    | real    | real    | vd[i] = sgn(vs1[i])*abs(vs2[i])    |
 | `xvrrsgnjn.vv` | real    | real    | real    | vd[i] = -sgn(vs1[i])*abs(vs2[i])   |
 | `xvrrsgnjx.vv` | real    | real    | real    | vd[i] = sgn(vs1[i])*vs2[i]         |
+|----------------|---------|---------|---------|------------------------------------|
 | `xvrreq.vv`    | real    | real    | real    | vd[i] = vs1[i] == vs2[i]           |
 | `xvcceq.vv`    | complex | complex | complex | vd[i] = vs1[i] == vs2[i]           |
 | `xvrrne.vv`    | real    | real    | real    | vd[i] = vs1[i] != vs2[i]           |
