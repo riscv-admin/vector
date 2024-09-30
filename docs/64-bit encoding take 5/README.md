@@ -87,19 +87,28 @@ Other elements of the destination vector will be set to a fixed value.
 
 #### List of HPC-oriented floating-point vector/vector arithmetic instructions
 
-| instruction  | `vs1`   | `vs2`   | `vd`    | semantics               |
-|--------------|---------|---------|---------|-------------------------|
-| `vrradd.vv`  | real    | real    | real    | vd[i] = vs1[i] + vs2[i] |
-| `vccadd.vv`  | complex | complex | complex | vd[i] = vs1[i] + vs2[i] |
-| `vrcadd.vv`  | real    | complex | complex | vd[i] = vs1[i] + vs2[i] |
-| `vrrsub.vv`  | real    | real    | real    | vd[i] = vs1[i] - vs2[i] |
-| `vccsub.vv`  | complex | complex | complex | vd[i] = vs1[i] - vs2[i] |
-| `vrcsub.vv`  | real    | complex | complex | vd[i] = vs1[i] - vs2[i] |
-| `vcrsub.vv`  | complex | real    | complex | vd[i] = vs1[i] - vs2[i] |
-| `vrrmul.vv`  | real    | real    | real    | vd[i] = vs1[i] * vs2[i] |
-| `vccmul.vv`  | complex | complex | complex | vd[i] = vs1[i] * vs2[i] |
-| `vrcmul.vv`  | real    | complex | complex | vd[i] = vs1[i] * vs2[i] |
-| `vrrdiv.vv`  | real    | real    | real    | vd[i] = vs1[i] / vs2[i] |
-| `vccdiv.vv`  | complex | complex | complex | vd[i] = vs1[i] / vs2[i] |
-| `vrcdiv.vv`  | real    | complex | complex | vd[i] = vs1[i] / vs2[i] |
-| `vcrdiv.vv`  | complex | real    | complex | vd[i] = vs1[i] / vs2[i] |
+| instruction    | `vs1`   | `vs2`   | `vd`    | semantics                |
+|----------------|---------|---------|---------|--------------------------|
+| `xvrradd.vv`   | real    | real    | real    | vd[i] = vs1[i] + vs2[i]  |
+| `xvccadd.vv`   | complex | complex | complex | vd[i] = vs1[i] + vs2[i]  |
+| `xvrcadd.vv`   | real    | complex | complex | vd[i] = vs1[i] + vs2[i]  |
+| `xvrrsub.vv`   | real    | real    | real    | vd[i] = vs1[i] - vs2[i]  |
+| `xvccsub.vv`   | complex | complex | complex | vd[i] = vs1[i] - vs2[i]  |
+| `xvrcsub.vv`   | real    | complex | complex | vd[i] = vs1[i] - vs2[i]  |
+| `xvcrsub.vv`   | complex | real    | complex | vd[i] = vs1[i] - vs2[i]  |
+| `xvrrmul.vv`   | real    | real    | real    | vd[i] = vs1[i] * vs2[i]  |
+| `xvccmul.vv`   | complex | complex | complex | vd[i] = vs1[i] * vs2[i]  |
+| `xvrcmul.vv`   | real    | complex | complex | vd[i] = vs1[i] * vs2[i]  |
+| `xvrrdiv.vv`   | real    | real    | real    | vd[i] = vs1[i] / vs2[i]  |
+| `xvccdiv.vv`   | complex | complex | complex | vd[i] = vs1[i] / vs2[i]  |
+| `xvrcdiv.vv`   | real    | complex | complex | vd[i] = vs1[i] / vs2[i]  |
+| `xvcrdiv.vv`   | complex | real    | complex | vd[i] = vs1[i] / vs2[i]  |
+| `xvrrmacc.vv`  | real    | real    | real    | vd[i] = +(vs1[i] * vs2[i]) + vd[i] |
+| `xvccmacc.vv`  | complex | complex | complex | vd[i] = +(vs1[i] * vs2[i]) + vd[i] |
+| `xvrcmacc.vv`  | real    | complex | complex | vd[i] = +(vs1[i] * vs2[i]) + vd[i] |
+| `xvrrnmacc.vv` | real    | real    | real    | vd[i] = -(vs1[i] * vs2[i]) - vd[i] |
+| `xvccnmacc.vv` | complex | complex | complex | vd[i] = -(vs1[i] * vs2[i]) - vd[i] |
+| `xvrcnmacc.vv` | real    | complex | complex | vd[i] = -(vs1[i] * vs2[i]) - vd[i] |
+
+
+
