@@ -87,7 +87,7 @@ Other elements of the destination vector will be set to a fixed value.
 
 #### List of HPC-oriented floating-point vector/vector arithmetic instructions
 
-| instruction    | `vs1`   | `vs2`   | `vd`    | semantics                |
+| instruction    | `vs1`   | `vs2`   | `vd`    | semantics                          |
 |----------------|---------|---------|---------|------------------------------------|
 | `xvrradd.vv`   | real    | real    | real    | vd[i] = vs1[i] + vs2[i]            |
 | `xvccadd.vv`   | complex | complex | complex | vd[i] = vs1[i] + vs2[i]            |
@@ -96,6 +96,7 @@ Other elements of the destination vector will be set to a fixed value.
 | `xvccsub.vv`   | complex | complex | complex | vd[i] = vs1[i] - vs2[i]            |
 | `xvrcsub.vv`   | real    | complex | complex | vd[i] = vs1[i] - vs2[i]            |
 | `xvcrsub.vv`   | complex | real    | complex | vd[i] = vs1[i] - vs2[i]            |
+|----------------|---------|---------|---------|------------------------------------|
 | `xvrrmul.vv`   | real    | real    | real    | vd[i] = vs1[i] * vs2[i]            |
 | `xvccmul.vv`   | complex | complex | complex | vd[i] = vs1[i] * vs2[i]            |
 | `xvrcmul.vv`   | real    | complex | complex | vd[i] = vs1[i] * vs2[i]            |
