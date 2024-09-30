@@ -127,5 +127,16 @@ Other elements of the destination vector will be set to a fixed value.
 | `xvrrnmsub.vv` | real    | real    | real    | vd[i] = -(vs1[i] * vd[i]) + vs2[i] |
 | `xvccnmsub.vv` | complex | complex | complex | vd[i] = -(vs1[i] * vd[i]) + vs2[i] |
 | `xvrcnmsub.vv` | real    | complex | complex | vd[i] = -(vs1[i] * vd[i]) + vs2[i] |
-
-
+| `xvrrmin.vv`   | real    | real    | real    | vd[i] = min(vs1[i],vs2[i])         |
+| `xvrrmax.vv`   | real    | real    | real    | vd[i] = max(vs1[i],vs2[i])         |
+| `xvrrsgnj.vv`  | real    | real    | real    | vd[i] = sgn(vs1[i])*abs(vs2[i])    |
+| `xvrrsgnjn.vv` | real    | real    | real    | vd[i] = -sgn(vs1[i])*abs(vs2[i])   |
+| `xvrrsgnjx.vv` | real    | real    | real    | vd[i] = sgn(vs1[i])*vs2[i]         |
+| `xvrreq.vv`    | real    | real    | real    | vd[i] = vs1[i] == vs2[i]           |
+| `xvcceq.vv`    | complex | complex | complex | vd[i] = vs1[i] == vs2[i]           |
+| `xvrrne.vv`    | real    | real    | real    | vd[i] = vs1[i] != vs2[i]           |
+| `xvccne.vv`    | complex | complex | complex | vd[i] = vs1[i] != vs2[i]           |
+| `xvrrlt.vv`    | real    | real    | real    | vd[i] = vs1[i] < vs2[i]            |
+| `xvrrle.vv`    | real    | real    | real    | vd[i] = vs1[i] <= vs2[i]           |
+| `xvrrgt.vv`    | real    | real    | real    | vd[i] = vs1[i] > vs2[i]            |
+| `xvrrge.vv`    | real    | real    | real    | vd[i] = vs1[i] >= vs2[i]           |
