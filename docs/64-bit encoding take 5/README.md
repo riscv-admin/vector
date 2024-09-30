@@ -69,11 +69,13 @@ Sizes are encoded according to the following table:
 The size for an element type of a vector operand is used to compute the effective group multiplier for the registers `v` containing that operand.
 For real-valued operands, `EMUL` (v) = `size`(v) $\times$ `LMUL`
 This ensures that, in mixed-type instructions, all register groups (one group for vs1, one group for vs2, one group for vd) have the same number of elements.
+The number of elements in a group is always `VLENB` $\times$ `LMUL`
 
 #### Examples (`LMUL = 1`, `VLENB` = 16)
 
-`xvfmacc.vv`<c64,f32,c32,up>\[m32/1/z\] v0, v16, v20
+`xvrcmacc.vv`<`vd size`=double, `vs1 size`=single, `vs2 size`=single, `vm`=32, `vfprnd`=up, `polarity`=positive, `agnostic`=yes> v0, v16, v20
 
+The instruction computes vd[i] += vs1[i] * vs2[i], with vs1 storing real values and vs2 and vd storing complex values. (These semantics are defined by the function code corresponding to `xvrcmacc.vv`.)
 This instruction operates on vectors of 16 elements (`LMUL = 1`, `VLENB` = 16). The first source vector (`vs1`) consists of 16 elements of type IEEE fp32, stored in the group (v16-v19). 
 The second source vector (`vs2`) consists of 16 elements of type single-precision complex, stored in the group (v20-v27).
 The instruction computes the element-wise multiplication of `vs1` and `vs2`. 
