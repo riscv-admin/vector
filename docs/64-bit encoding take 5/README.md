@@ -50,7 +50,7 @@ The additional 32 bits of space in a 64-bit encoding are consumed as follows:
 
 The vector length multiplier (LMUL) and vector tail agnostic flag (vta) are not specified in every instruction and must be specified in the vtype CSR.
 The expectation is that these parameters reflect a choice of the programming model and will not change during execution of a long body of code (e.g., an entire source code function).
-The remaining parameters (elemental data types, mask register, mask polarity, mask agnostic, and floating-point rounding mode) are more local decisions 
+The remaining parameters (elemental data sizes, mask register, mask polarity, mask agnostic, and floating-point rounding mode) are more local decisions 
 and it is advantageous to both the program and the micro-architecture to have them explicitly identified in every instruction.
 
 #### Element size information
@@ -62,8 +62,8 @@ Sizes are encoded according to the following table:
 
 | `size` field | size of element | floating-point variant                          |
 |--------------|-----------------|-------------------------------------------------|
-| 0            | 4 bytes         | IEEE half-precision or bfloat16 real or complex |
-| 1            | 8 bytes         | IEEE single-precision real or complex           |
+| 0            | 2 bytes         | IEEE half-precision or bfloat16 real or complex |
+| 1            | 4 bytes         | IEEE single-precision real or complex           |
 | 2            | 8 bytes         | IEEE double-precision real or complex           |
 | 3            | 16 bytes        | IEEE quad-precision real or complex             |
 
