@@ -1,0 +1,61 @@
+11:15:28 From Philip Reames (Rivos) to Everyone:
+	Running commentary on the proposal.
+11:15:34 From Philip Reames (Rivos) to Everyone:
+	Replying to "Running commentary o…"
+	Based on the vsetvls I see in generating code, having mask policy but not tail policy in the encoding seems questionable.  I would want to see data showing this is the net better choice.
+11:16:11 From Philip Reames (Rivos) to Everyone:
+	Replying to "Running commentary o…"
+	Would be better to use existing standard terms.  (Size is SEW/EEW)
+11:17:24 From Philip Reames (Rivos) to Everyone:
+	Replying to "Running commentary o…"
+	There are many fewer unique combinations of Dest/Src EEWs than this encoding allows.  You’d be better off encoding unique relationships (from an encoding space perspective)
+11:17:37 From Keeran Rothenfusser (Rivos) to Everyone:
+	Reacted to "There are many fewer..." with 👍
+11:19:12 From Philip Reames (Rivos) to Everyone:
+	Replying to "Running commentary o…"
+	You are adding multiple features to the encoding (mask polarity and SEW override) which are rarely used in combination.  You could instead define two instruction groups, each with a subset of features.
+11:25:07 From Olaf Bernstein (Individual) to Everyone:
+	Reacted to "There are many few..." with 👍
+11:27:05 From Abel Bernabeu (Esperanto) to Everyone:
+	What about operand size of 1 byte? The table only encodes 2, 4, 8 and 16 bytes
+11:31:56 From David Weaver (Akeana) to Everyone:
+	Reacted to "What about operand s..." with 👍
+11:37:32 From Olaf Bernstein (Individual) to Everyone:
+	Presumably we'd need to change topics soon if we want to cover the instructions for video workloads today.
+11:39:37 From Philip Reames (Rivos) to Everyone:
+	Replying to "Running commentary o…"
+	Just to add a note to the thread.  I had been interpreting this as a representative proposal for the entire 64 bit space.  I was apparently wrong and this was meant specifically for the domain discussed with other domains having different encodings. Given that, my comments don’t really apply given my lack of experience with the specific domain. 
+	
+	The choice to have distinct decoding rules for each domain does feel questionable to me.
+11:39:56 From Al Martin (Akeana) to Everyone:
+	what about sqrt, or the recip and sqrt approximations?
+11:49:05 From Olaf Bernstein (Individual) to Everyone:
+	Some benchmarks for transpose implementations: https://godbolt.org/z/TYec3zhWz (It's also linked on the RISE page: https://lf-rise.atlassian.net/wiki/spaces/HOME/pages/8587962/RVA23+Profile)
+11:49:38 From Punit Agrawal (Bytedance) to Everyone:
+	Reacted to "Some benchmarks for ..." with 👍
+11:50:54 From Olaf Bernstein (Individual) to Everyone:
+	I think having two versions trn1/trn2 would be preferable, since it's more general
+11:53:26 From Philip Reames (Rivos) to Everyone:
+	Reacted to "I think having two v…" with 👍
+11:55:46 From Olaf Bernstein (Individual) to Everyone:
+	occurances across x264, dav1d and ffmpeg:
+	trn1/trn2:    948
+	sabd/uabd:    264
+	sabdl/uabdl:  23
+	saba/uaba:    54
+	sabal/uabal:  77
+	rshrn/rshrn2: 794
+	sqxtun:       512
+11:57:02 From Punit Agrawal (Bytedance) to Everyone:
+	Reacted to "occurances across x2..." with 👍
+12:01:41 From Keeran Rothenfusser (Rivos) to Everyone:
+	Reacted to "I think having two v..." with 👍
+12:03:20 From Al Martin (Akeana) to Everyone:
+	sorry, gotta go
+12:04:50 From Olaf Bernstein (Individual) to Everyone:
+	quick statistic from ffmpeg: trn1: 279  trn2: 228
+	so they aren't always used together
+12:05:52 From Ken Dockser (Tenstorrent) to Everyone:
+	Need to drop
+12:06:01 From Olaf Bernstein (Individual) to Everyone:
+	FYI: zip can be done with `vwmaccu.vx(vwaddu.vv(a, b), -1U, b)`  and unizp `vnsra.wi`
