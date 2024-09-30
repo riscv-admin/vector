@@ -22,5 +22,5 @@ Attendance (# people):
 
 ## Agenda
 - [Zoom recording]()
-- [Chat transcript]()
+- [Chat transcript](https://github.com/riscv-admin/vector/blob/main/minutes/2024/2024-09-30/meeting_saved_chat.txt)
 - Jose has an update on the [64-bit encoding](https://github.com/riscv-admin/vector/blob/main/docs/64-bit%20encoding%20take%205/README.md).
