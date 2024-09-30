@@ -5,6 +5,7 @@ We want to accomplish the following goals with the 64-bit encoding:
 2. Support multiple vector mask registers. The space of vector mask registers is a subset of the space of vector registers.
 3. Explicitly identify the element-width of each source and destination vector register, as a means to support general mixed-type instructions.
 4. Explicitly identify mask agnostic and rounding-modes in each instruction.
+5. Support a programming model with all vectors having the same number of elements.
 
 ### Do we really need 256 architected vector registers?
 
