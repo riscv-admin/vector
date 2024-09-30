@@ -109,6 +109,23 @@ Other elements of the destination vector will be set to a fixed value.
 | `xvrrnmacc.vv` | real    | real    | real    | vd[i] = -(vs1[i] * vs2[i]) - vd[i] |
 | `xvccnmacc.vv` | complex | complex | complex | vd[i] = -(vs1[i] * vs2[i]) - vd[i] |
 | `xvrcnmacc.vv` | real    | complex | complex | vd[i] = -(vs1[i] * vs2[i]) - vd[i] |
-
+| `xvrrmsac.vv`  | real    | real    | real    | vd[i] = +(vs1[i] * vs2[i]) - vd[i] |
+| `xvccmsac.vv`  | complex | complex | complex | vd[i] = +(vs1[i] * vs2[i]) - vd[i] |
+| `xvrcmsac.vv`  | real    | complex | complex | vd[i] = +(vs1[i] * vs2[i]) - vd[i] |
+| `xvrrnmsac.vv` | real    | real    | real    | vd[i] = -(vs1[i] * vs2[i]) + vd[i] |
+| `xvccnmsac.vv` | complex | complex | complex | vd[i] = -(vs1[i] * vs2[i]) + vd[i] |
+| `xvrcnmsac.vv` | real    | complex | complex | vd[i] = -(vs1[i] * vs2[i]) + vd[i] |
+| `xvrrmadd.vv`  | real    | real    | real    | vd[i] = +(vs1[i] * vd[i]) + vs2[i] |
+| `xvccmadd.vv`  | complex | complex | complex | vd[i] = +(vs1[i] * vd[i]) + vs2[i] |
+| `xvrcmadd.vv`  | real    | complex | complex | vd[i] = +(vs1[i] * vd[i]) + vs2[i] |
+| `xvrrnmadd.vv` | real    | real    | real    | vd[i] = -(vs1[i] * vd[i]) - vs2[i] |
+| `xvccnmadd.vv` | complex | complex | complex | vd[i] = -(vs1[i] * vd[i]) - vs2[i] |
+| `xvrcnmadd.vv` | real    | complex | complex | vd[i] = -(vs1[i] * vd[i]) - vs2[i] |
+| `xvrrmsub.vv`  | real    | real    | real    | vd[i] = +(vs1[i] * vd[i]) - vs2[i] |
+| `xvccmsub.vv`  | complex | complex | complex | vd[i] = +(vs1[i] * vd[i]) - vs2[i] |
+| `xvrcmsub.vv`  | real    | complex | complex | vd[i] = +(vs1[i] * vd[i]) - vs2[i] |
+| `xvrrnmsub.vv` | real    | real    | real    | vd[i] = -(vs1[i] * vd[i]) + vs2[i] |
+| `xvccnmsub.vv` | complex | complex | complex | vd[i] = -(vs1[i] * vd[i]) + vs2[i] |
+| `xvrcnmsub.vv` | real    | complex | complex | vd[i] = -(vs1[i] * vd[i]) + vs2[i] |
 
 
