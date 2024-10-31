@@ -23,4 +23,4 @@ Attendance (# people):
 ## Agenda
 - [Zoom recording]()
 - [Chat transcript]()
-- Jose has would like to discuss [three potential gaps for RISC-V Vector]()
+- Jose has would like to discuss [three potential gaps for RISC-V Vector](3 gaps 2024-OCT-28.pdf)
