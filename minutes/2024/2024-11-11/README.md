@@ -23,5 +23,5 @@ Attendance (# people):
 ## Agenda
 - [Zoom recording]()
 - [Chat transcript]()
-- [International Workshop on RISC-V for HPC](https://sc24.conference-program.com/session/?sess=sess763)
+- [International Workshop on RISC-V for HPC at SC24](https://sc24.conference-program.com/session/?sess=sess763)
 - A deep(er) dive on [supporting MX format in RISC-V](RISC-V%20MX.pdf)
