@@ -27,7 +27,7 @@ Attendance (# people):
 ### OCP Microscaling Formats
 - [Using MX (Microscaling) with Quark](https://quark.docs.amd.com/latest/pytorch/tutorial_mx.html)
 - [Microscaling (MX) Quantization in OpenVINO](https://docs.openvino.ai/2024/openvino-workflow/model-optimization-guide/weight-compression/microscaling-quantization.html)
-- [AMD MI355X preview](https://www.tomshardware.com/tech-industry/artificial-intelligence/amd-reveals-core-specs-for-instinct-mi355x-cdna4-ai-accelerator-slated-for-shipping-in-the-second-half-of-2025) and [one page summary](https://cdn.mos.cms.futurecdn.net/RaQn38CU5R2LPXqCHbee84.jpg
+- [AMD MI355X preview](https://www.tomshardware.com/tech-industry/artificial-intelligence/amd-reveals-core-specs-for-instinct-mi355x-cdna4-ai-accelerator-slated-for-shipping-in-the-second-half-of-2025) and [one page summary](https://cdn.mos.cms.futurecdn.net/RaQn38CU5R2LPXqCHbee84.jpg)
 - [Microscaling emulation library](https://github.com/microsoft/microxcaling)
 - [NVIDIA PTX matrix instructions (no MX yet)](https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#warp-level-matrix-multiply-accumulate-instructions)
 - 
