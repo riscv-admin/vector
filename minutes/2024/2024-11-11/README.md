@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2024-NOV-25
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://urldefense.proofpoint.com/v2/url?u=https-3A__zoom.us_rec_share_YODe-2DcBirBdntTAc2Y0MSE9ElJp8Dyfj0wQ6Ja08W5Wm0S-2DqNSCSL8lba67R2Bo.uTilSmVyOLDUAu7K-3FstartTime-3D1731340936000&d=DwMFaQ&c=BSDicqBQBDjDI9RkVyTcHQ&r=CGtVG21dwYxrAUKKyZIqf-voRGwP7GZaadGnX9V2piY&m=oKSEB-18ZLJiLCEtk6z--JGDwm3JDc10VfueSNnL4ET75KqyLMQegoQnXLj8rngD&s=X2vWLmVoUhyOFpdHqKUkNlja5CdrhupSnooaY4ZBlwQ&e=)
 - [Chat transcript]()
 - [International Workshop on RISC-V for HPC at SC24](https://sc24.conference-program.com/session/?sess=sess763)
 - A deep(er) dive on [supporting MX format in RISC-V](RISC-V%20MX.pdf)
