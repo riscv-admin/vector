@@ -24,4 +24,12 @@ Attendance (# people):
 - [Zoom recording]()
 - [Chat transcript]()
 
+### OCP Microscaling Formats
+
+### 64-bit vector instruction encoding
+
+### Incomplete/partial specifications
+
+### Multiple vector multiply-accumulate
+
 
