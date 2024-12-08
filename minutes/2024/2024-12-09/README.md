@@ -33,5 +33,6 @@ Attendance (# people):
 6. How to deal with incomplete/partial architectural specifications (e.g., unordered arithmetic operations).
 7. Support for OCP Microscaling (MX) Formats.
 8. Multiple vector multiply-accumulate instructions (e.g., Intel x86 V4-like instructions).
+9. Olaf Bernstein's [Informal Gap Analysis](https://gist.github.com/camel-cdr/99a41367d6529f390d25e36ca3e4b626)
 
 
