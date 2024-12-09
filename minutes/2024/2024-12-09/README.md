@@ -39,7 +39,7 @@ Attendance (# people):
 12. [8-bit integer dot-product](https://github.com/riscv/riscv-dot-product/releases/download/v0.0.1/dot-product.pdf).
 13. Mingled floating-point and vector register files.
 14. Mask/shift instructions.
-15. Olaf Bernstein's [Informal Gap Analysis](https://gist.github.com/camel-cdr/99a41367d6529f390d25e36ca3e4b626)
+15. Olaf Bernstein's [Informal Gap Analysis](https://gist.github.com/camel-cdr/99a41367d6529f390d25e36ca3e4b626).
 16. Punit Agrawal's [Vector Operations Proposal](https://lf-rise.atlassian.net/wiki/spaces/HOME/pages/145948673/Vector+Operations+Proposals+-+Draft+Document).
 
 
