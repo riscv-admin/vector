@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2024-DEC-09
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://zoom.us/rec/share/cgivqIMly56Pjf3R9tbVl5TMPgHdjNBbgY5kzFpz-Qwjmax-q-Z68zXUxAs-Pk7w.gse1z_9OVj4njUQW?startTime=1732550559000)
 - [Chat transcript]()
 
 ### OCP Microscaling Formats
