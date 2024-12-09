@@ -36,7 +36,7 @@ Attendance (# people):
 9. Video workloads [1](https://lists.riscv.org/g/sig-vector/topic/vector_operations_for_video/108187661), [2](https://lf-rise.atlassian.net/wiki/spaces/HOME/pages/145948673/Vector+Operations+Proposals+-+Draft+Document), and [3](https://lf-rise.atlassian.net/wiki/spaces/HOME/pages/8588516/RISCV64+new+vector+instructions+requirements+for+video+multimedia).
 10. Support for wireless workloads.
 11. FP8 support, independent of MX Format.
-12. 8-bit integer dot-product.
+12. [8-bit integer dot-product](https://github.com/riscv/riscv-dot-product/releases/download/v0.0.1/dot-product.pdf).
 13. Mingled floating-point and vector register files.
 14. Mask/shift instructions.
 15. Olaf Bernstein's [Informal Gap Analysis](https://gist.github.com/camel-cdr/99a41367d6529f390d25e36ca3e4b626)
