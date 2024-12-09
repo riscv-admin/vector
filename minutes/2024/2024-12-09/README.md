@@ -33,12 +33,13 @@ Attendance (# people):
 6. How to deal with incomplete/partial architectural specifications (e.g., unordered arithmetic operations).
 7. Support for OCP Microscaling (MX) Formats.
 8. Multiple vector multiply-accumulate instructions (e.g., Intel x86 V4-like instructions).
-9. Video workloads [1](https://lists.riscv.org/g/sig-vector/topic/vector_operations_for_video/108187661), [2](https://lf-rise.atlassian.net/wiki/spaces/HOME/pages/145948673/Vector+Operations+Proposals+-+Draft+Document), and [3](https://lf-rise.atlassian.net/wiki/spaces/HOME/pages/8588516/RISCV64+new+vector+instructions+requirements+for+video+multimedia).
+9. Video workloads [discussion](https://lists.riscv.org/g/sig-vector/topic/vector_operations_for_video/108187661) and [proposal](https://lf-rise.atlassian.net/wiki/spaces/HOME/pages/8588516/RISCV64+new+vector+instructions+requirements+for+video+multimedia).
 10. Support for wireless workloads.
 11. FP8 support, independent of MX Format.
 12. [8-bit integer dot-product](https://github.com/riscv/riscv-dot-product/releases/download/v0.0.1/dot-product.pdf).
 13. Mingled floating-point and vector register files.
 14. Mask/shift instructions.
 15. Olaf Bernstein's [Informal Gap Analysis](https://gist.github.com/camel-cdr/99a41367d6529f390d25e36ca3e4b626)
+16. Punit Agrawal's [Vector Operations Proposal](https://lf-rise.atlassian.net/wiki/spaces/HOME/pages/145948673/Vector+Operations+Proposals+-+Draft+Document).
 
 
