@@ -27,7 +27,7 @@ Attendance (# people):
 ### Next steps
 1. We will pursue (separate) fast-track routes to standardize the three most important items for video processing support:
     1. The dot-product instructions are already under a fast-track process. We should participate in that process.
-    2. The zip/unzip instructions are well understood and there is even an initial proposal. (Punit Agrawal will take the lead in drafting a chart for that work.)
+    2. The zip/unzip instructions are well understood and there is even an [initial proposal](https://github.com/riscv-admin/vector/blob/main/minutes/2024/2024-12-09/Vzip%20Fast%20Track%20Architecture%20Proposal.pdf). (Punit Agrawal will take the lead in drafting a chart for that work.)
     3. Absolute differences instructions. Punit Agrawal will also take the lead on this one.
 2. We will start support for FP8 data types with conversion-only instructions. Probably these will be convertion to/from 16-bit floating-point types from/to 8-bit floating-point types. We will focus on the more popular ML formats (E5M2 and E4M3), and not worry about block formats (e.g., MX) yet. (Krste Asanović will ask Andrew Waterman to prepare a strawman proposal.)
 
