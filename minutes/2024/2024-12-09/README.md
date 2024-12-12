@@ -22,7 +22,7 @@ Attendance (# people):
 
 ## Agenda
 - [Zoom recording]()
-- [Chat transcript]()
+- [AI-generated summary](https://github.com/riscv-admin/vector/blob/main/minutes/2024/2024-12-09/AI%20Meeting%20Summary%20for%20Vector%20SIG%20Meeting%20-%202024-DEC-09.pdf) - Use with caution! I read it, and it is not bad but there is some confusion. I will do some cleanup and post an edited version.
 
 ### Next steps
 1. We will pursue (separate) fast-track routes to standardize the three most important items for video processing support:
