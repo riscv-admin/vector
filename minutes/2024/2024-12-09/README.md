@@ -21,7 +21,7 @@ Attendance (# people):
 - Next meeting: 2025-JAN-06
 
 ## Agenda
-- [Zoom recording]()
+- [Zoom recording](https://zoom.us/rec/share/cT8tEJ8n56OTojSBP3sa0W-sAYMP9Yi1c54wYuep6UYJRqdWdZgDAHESNcuJyylZ.PH7qJuvpc7KEjA1q?startTime=1733760245000)
 - [AI-generated summary](https://github.com/riscv-admin/vector/blob/main/minutes/2024/2024-12-09/AI%20Meeting%20Summary%20for%20Vector%20SIG%20Meeting%20-%202024-DEC-09.pdf) - Use with caution! I read it, and it is not bad but there is some confusion. I will do some cleanup and post an edited version.
 
 ### Next steps
