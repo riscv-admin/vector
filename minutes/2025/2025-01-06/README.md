@@ -18,7 +18,7 @@ Attendance (# people):
 - We meet every other Monday, 11:00-12:00 ET
 - Previous meetings:
 - Current meeting: [2025-JAN-06](https://github.com/riscv-admin/vector/tree/main/minutes/2025/2026-01-06)
-- Next meeting: 2025-JAN-06
+- Next meeting: 2025-JAN-20 (MLK Day)
 
 ## Agenda
 - Happy New Year!
