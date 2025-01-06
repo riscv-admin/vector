@@ -21,9 +21,10 @@ Attendance (# people):
 - Next meeting: 2025-JAN-20 (MLK Day)
 
 ## Agenda
-- Happy New Year!
 - [Zoom recording]()
 - [AI-generated summary]() - Use with caution!
+- Happy New Year!
+- Move to LFX meeting
 
 ### From last meeting
 1. Three (possible) fast-track proposals
@@ -34,4 +35,4 @@ Attendance (# people):
 
 ### New issues raised during the Holidays
 1. Inconsistency between published ISA and github?
-2. Non-deterministic behavior? ((deterministic/nondeterministic) vs (undefined, under specified, implementation defined, statistically specified)
+2. Non-deterministic behavior? ((deterministic/nondeterministic) vs (undefined, under specified, implementation defined, statistically specified) vs (conforming/nonconforming)
