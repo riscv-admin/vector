@@ -34,4 +34,4 @@ Attendance (# people):
 
 ### New issues raised during the Holidays
 1. Inconsistency between published ISA and github?
-2. Non-deterministic behavior?
+2. Non-deterministic behavior? ((deterministic/nondeterministic) vs (undefined, under specified, implementation defined, statistically specified)
