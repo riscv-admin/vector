@@ -26,7 +26,7 @@ Attendance (# people):
 - [AI-generated summary]() - Use with caution!
 
 ### From last meeting
-1. The (possible) fast-track proposals
+1. Three (possible) fast-track proposals
       1. Dot-product (already under way).
       2. Zip/unzip instructions.
       3. Absolute differences instructions. 
