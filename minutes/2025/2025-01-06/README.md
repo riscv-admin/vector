@@ -35,4 +35,6 @@ Attendance (# people):
 
 ### New issues raised during the Holidays
 1. Inconsistency between published ISA and github?
+      1. The official specification is the [RISC-V ISA Manual](https://github.com/riscv/riscv-isa-manual)
+      2. Including the ["V" Standard Extension for Vector Operations, Version 1.0](https://github.com/riscv/riscv-isa-manual/blob/main/src/v-st-ext.adoc)
 2. Non-deterministic behavior? ((deterministic/nondeterministic) vs (undefined, under specified, implementation defined, statistically specified) vs (conforming/nonconforming)
