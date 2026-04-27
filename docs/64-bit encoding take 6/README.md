@@ -37,7 +37,7 @@ Add 8 bits for the current vtype fields:
 
 ### 43-bit vv-encoding for vector arithmetic instructions (size of field in bits)
 
-Add 8 bits for the current vtype fields:
+Add 3 bits for the future "immediate" vtype fields:
 
 | major <br> (7) | vd <br> (5) | variant <br> (3) | vs1 <br> (5) | vs2 <br> (5) | vm <br> (1) | function <br> (6) | vma <br> (1) | vta <br> (1) | vsew <br> (3) | vlmul <br> (3) | vimm <br> (3) |
 |----------------|-------------|------------------|--------------|--------------|-------------|-------------------|--------------|--------------|---------------|----------------|---------------|
