@@ -27,6 +27,18 @@ In this strawman 64-bit encoding, we adopt different formats for each variant.
 Whereas we preserve the use of major opcode 0x57 to identify vector arithmetic instructions, we take more liberty with the use of the variant and function fields.
 This is justified, in part, by the approach of more explicitly encoding the type of the operands.
 
+### 40-bit vv-encoding for vector arithmetic instructions (size of field in bits)
+
+Add 8 bits for the current vtype fields:
+
+| major <br> (7) | vd <br> (5) | variant <br> (3) | vs1 <br> (5) | vs2 <br> (5) | vm <br> (1) | function <br> (6) | vma <br> (1) | vta <br> (1) | vsew <br> (3) | vlmul <br> (3) |
+|----------------|-------------|------------------|--------------|--------------|-------------|-------------------|--------------|--------------|---------------|----------------|
+| 0x57           |  $0:31$     | $0:7$            | $0:31$       | $0:31$       | $0:1$       | $0:63$            | $0:1$        | $0:1$        | $0:7$         | $0:7$          |
+
+In this strawman 64-bit encoding, we adopt different formats for each variant.
+Whereas we preserve the use of major opcode 0x57 to identify vector arithmetic instructions, we take more liberty with the use of the variant and function fields.
+This is justified, in part, by the approach of more explicitly encoding the type of the operands.
+
 ### 64-bit vv-encoding for HPC-oriented floating-point vector/vector arithmetic instructions (size of field in bits)
 
 | major <br> (7) | vd <br> (8) | variant <br> (3) | vs1 <br> (8) | vs2 <br> (8) | vm <br> (3) | polarity <br> (1) | vd size <br> (2) | vs1 size <br> (2) | vs2 size <br> (2) | vma <br> (1) | vfprnd (3) | function <br> (9)                   | suffix <br> (7) | 
