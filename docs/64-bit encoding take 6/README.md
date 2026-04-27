@@ -45,7 +45,7 @@ Add 3 bits for the future "immediate" vtype fields:
 
 ### 64-bit vv-encoding for HPC-oriented floating-point vector/vector arithmetic instructions (size of field in bits)
 
-| major <br> (7) | vd <br> (8) | variant <br> (3) | vs1 <br> (8) | vs2 <br> (8) | vm <br> (3) | polarity <br> (1) | vd size <br> (2) | vs1 size <br> (2) | vs2 size <br> (2) | vma <br> (1) | vfprnd (3) | function <br> (9)                   | suffix <br> (7) | 
+| major <br> (7) | vd <br> (8) | variant <br> (3) | vs1 <br> (8) | vs2 <br> (8) | vm <br> (3) | polarity <br> (1) | vd eew <br> (2)  | vs1 eew <br> (2)  | vs2 eew <br> (2)  | vma <br> (1) | vfprnd (3) | function <br> (9)                   | suffix <br> (7) | 
 |----------------|-------------|------------------|--------------|--------------|-------------|-------------------|------------------|-------------------|-------------------|--------------|------------|-------------------------------------|-----------------|          
 | 0x57           |  $0:255$    | 0x1              | $0:255$      | $0:255$      | $0:7$       | $0:1$             | $0:3$            | $0:3$             | $0:3$             | $0:1$        | $0:7$      | bbbbbbnnn <br> ${\sf nnn} \neq 111$ | 1111111         |
 
